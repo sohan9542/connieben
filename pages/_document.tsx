@@ -7,7 +7,7 @@ export default function Document() {
       <Head>
           <link rel="icon" href="/rs/logo.png" />
           <meta name="description" content="The #1 Trading Journal software in the world. Get in-depth analysis of your trading to manage risk, setups, entries, exits, and more!" />
-          <title>The Easy Solution To Journaling Your Trades</title>
+          <title>Holafly | International eSIM plans for travel abroad</title>
         </Head>
       <body>
         <Main />
