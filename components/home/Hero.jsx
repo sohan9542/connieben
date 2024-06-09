@@ -132,7 +132,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[1440px] my-[70px] mx-auto">
+      <div className="max-w-[1440px] mt-[90px] mx-auto">
         <div className="w-[80%] mx-auto">
           <div className=" w-full grid grid-cols-1 items-start lg:grid-cols-4 gap-5">
             <div className="flex items-center mt-3 flex-col ">
