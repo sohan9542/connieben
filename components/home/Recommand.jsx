@@ -152,13 +152,13 @@ const Recommand = () => {
                 </Slider>
                 <div className="flex items-center gap-4 mt-4">
                   <button
-                    className=" px-[13px] text-[24px] rounded-full border"
+                    className=" px-[15px] text-[24px] rounded-full border"
                     onClick={previous}
                   >
                     ‹
                   </button>
                   <button
-                    className=" px-[13px] text-[24px] rounded-full border"
+                    className=" px-[15px] text-[24px] rounded-full border"
                     onClick={next}
                   >
                     ›
