@@ -3,7 +3,7 @@ import Image from "next/image";
 const Enjoy = () => {
   return (
     <div className=" py-[100px] px-5 lg:px-0">
-      <h1 className="text-[26px] lg:text-[32px] text-center font-semibold">
+      <h1 className="text-[26px] lg:text-[32px] text-center font-medium">
         Enjoy reliable and affordable internet in <br className="hidden lg:block"/> your trips. We get you
         covered.
       </h1>
@@ -16,7 +16,7 @@ const Enjoy = () => {
               width={100}
               src={"/unlimited-small.svg"}
             />
-            <h6 className="text-[20px] pb-2 pt-6 font-semibold">
+            <h6 className="text-[20px] pb-2 pt-6 font-medium">
               Unlimited data
             </h6>
             <p className="text-center text-[#62666b] text-[14px] lg:max-w-[317px] ">
@@ -32,7 +32,7 @@ const Enjoy = () => {
               width={100}
               src={"/edgesensor_high.svg"}
             />
-            <h6 className="text-[20px] pb-2 pt-3 font-semibold">
+            <h6 className="text-[20px] pb-2 pt-3 font-medium">
             Keep using your favorite apps
 
             </h6>
@@ -47,7 +47,7 @@ const Enjoy = () => {
               width={100}
               src={"/keep-your-whatsapp-number.svg"}
             />
-            <h6 className="text-[20px] pb-2 pt-3 font-semibold">
+            <h6 className="text-[20px] pb-2 pt-3 font-medium">
             Keep your WhatsApp number
             </h6>
             <p className="text-center text-[#62666b] text-[14px] lg:max-w-[317px] ">
@@ -61,7 +61,7 @@ const Enjoy = () => {
               width={100}
               src={"/forum.svg"}
             />
-            <h6 className="text-[20px] pb-2 pt-3 font-semibold">
+            <h6 className="text-[20px] pb-2 pt-3 font-medium">
             24/7 Customer Support
 
             </h6>
@@ -76,7 +76,7 @@ const Enjoy = () => {
               width={100}
               src={"/rocket-beneficios.svg"}
             />
-            <h6 className="text-[20px] pb-2 pt-3 font-semibold">
+            <h6 className="text-[20px] pb-2 pt-3 font-medium">
             Fast and Reliable Internet Connection
             </h6>
             <p className="text-center text-[#62666b] text-[14px] lg:max-w-[317px] ">
@@ -90,7 +90,7 @@ const Enjoy = () => {
               width={100}
               src={"/digital-sim.svg"}
             />
-            <h6 className="text-[20px] pb-2 pt-3 font-semibold">
+            <h6 className="text-[20px] pb-2 pt-3 font-medium">
             Enjoy dual SIMs
             </h6>
             <p className="text-center text-[#62666b] text-[14px] lg:max-w-[317px] ">

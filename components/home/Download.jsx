@@ -13,7 +13,7 @@ const Download = () => {
         <div className="flex items-center justify-between px-5 pt-5 flex-col lg:flex-row absolute top-0 left-0 w-full h-full z-40">
           <div className="lg:pl-[107px] lg:w-[505px]">
             {" "}
-            <h1 className="text-[34px] font-semibold leading-[40px]">
+            <h1 className="text-[34px] font-medium leading-[40px]">
               Download the App and manage your eSIMs easily
             </h1>
             <div className="mt-8 flex items-center  gap-6">

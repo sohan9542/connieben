@@ -8,7 +8,7 @@ const FAQ = () => {
   const [active, setActive] = useState(null);
   return (
     <div className=" px-5 lg:px-0 my-[60px]">
-      <h1 className=" text-[26px] lg:text-[32px] font-semibold text-center ">
+      <h1 className=" text-[26px] lg:text-[32px] font-medium text-center ">
         Frequently Asked Questions (FAQs)
       </h1>
       <p className=" mt-5 mb-10 text-center">

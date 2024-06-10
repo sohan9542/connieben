@@ -12,7 +12,7 @@ const Plastic = () => {
             src={"/goodbye-to-plastic.webp"}
           />
           <div className=" absolute p-5 lg:p-0 top-0 flex justify-center flex-col items-center left-0 w-full h-full z-30">
-            <h6 className="text-[20px]  font-semibold text-center">
+            <h6 className="text-[20px]  font-medium text-center">
               Travel the world responsibly with Holafly, and <br className="hidden lg:block"/> let’s say
               goodbye to plastic!
             </h6>
@@ -20,7 +20,7 @@ const Plastic = () => {
               By using eSIMs, we can eliminate the environmental impact
               associated with physical SIM cards production, packaging, and
               distribution.{" "}
-              <a href="" className=" font-semibold underline">
+              <a href="" className=" font-medium underline">
                 Learn more.
               </a>
             </p>

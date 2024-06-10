@@ -6,6 +6,10 @@
   font-family: Modern-era;
   src: url(../public/mera-regular.ttf);
 }
+@font-face {
+  font-family:  modern-era-med;
+  src: url(../public/med.ttf);
+}
 
 * {
   margin: 0;
@@ -38,4 +42,9 @@
     rgb(244, 238, 248) 38%,
     rgb(251, 225, 220) 61%
   ) !important;
+}
+
+
+.font-medium{
+  font-family: modern-era-med!important;
 }

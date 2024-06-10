@@ -7,7 +7,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 const HowWork = () => {
   return (
     <div className="px-5 lg:px-0">
-      <h1 className="text-[26px] lg:text-[32px] font-semibold text-center">
+      <h1 className="text-[26px] lg:text-[32px] font-medium text-center">
         How does Holafly’s eSIM work?
       </h1>
       <div className=" hidden lg:block max-w-[1075px] relative mx-auto">
@@ -21,7 +21,7 @@ const HowWork = () => {
             />
           </div>
           <div>
-            <h6 className="text-[20px] font-semibold">
+            <h6 className="text-[20px] font-medium">
               Check that your device is eSIM-compatible and buy your data plan.
             </h6>
             <p className="mt-2 text-[14px]">
@@ -38,7 +38,7 @@ const HowWork = () => {
         </div>
         <div className=" grid grid-cols-1 lg:grid-cols-2 items-center gap-[200px]">
           <div>
-            <h6 className="text-[20px] font-semibold">
+            <h6 className="text-[20px] font-medium">
               Follow the installation instructions
             </h6>
             <p className="mt-2 ">
@@ -63,9 +63,9 @@ const HowWork = () => {
           <div className="w-[12px] h-[12px] my-1 bg-black rounded-full"></div>
         </div>
       </div>
-      <div className=" border lg:hidden mt-10  rounded-[12px] bg-white pt-5 px-5">
-        <div>
-          <h6 className="text-[20px] text-center font-semibold">
+      <div className=" border lg:hidden flex flex-col items-center mt-10  rounded-[12px] bg-white pt-5 px-5">
+        <div className="md:max-w-[450px]">
+          <h6 className="text-[20px] text-center font-medium">
             Check that your device is eSIM-compatible and buy your data plan.
           </h6>
           <p className="mt-2 text-center text-[14px]">
@@ -88,16 +88,15 @@ const HowWork = () => {
           />
         </div>
       </div>
-      <div className=" border lg:hidden mt-10  rounded-[12px] bg-white pt-5 px-5">
-        <div>
-        <h6 className="text-[20px] text-center font-semibold">
-              Follow the installation instructions
-            </h6>
-            <p className="mt-2 text-center ">
-              Please check the instructions email we sent you upon purchasing
-              your eSIM to complete the installation and activation process.
-            </p>
-         
+      <div className=" border lg:hidden mt-10 flex flex-col items-center  rounded-[12px] bg-white pt-5 px-5">
+        <div className="md:max-w-[450px]">
+          <h6 className="text-[20px] text-center font-medium">
+            Follow the installation instructions
+          </h6>
+          <p className="mt-2 text-center ">
+            Please check the instructions email we sent you upon purchasing your
+            eSIM to complete the installation and activation process.
+          </p>
         </div>
         <div className="flex mt-10 items-center justify-end">
           <Image
@@ -108,30 +107,30 @@ const HowWork = () => {
           />
         </div>
       </div>
-      <div className=" border lg:hidden mt-10  rounded-[12px] bg-[#F8F8FA] pt-5 px-5">
-        <div>
-        <h6 className="text-[20px] text-center font-semibold">
-           Get online right after landing. Start using your data plan as
-                soon as you arrive at your destination
-            </h6>
-            <p className="mt-2 text-center ">
-              Your phone will automatically connect to the internet network
-                upon arrival.
-            </p>
-            <div className="mt-5 flex items-center justify-center">
-                <button className="bg-[#48ec86] hover:bg-[#32A45E] hover:text-white font-medium py-2 px-[40px] rounded-[12px]">
-                  View all destinations
-                </button>
-              </div>
+      <div className=" border lg:hidden mt-10  flex flex-col items-center  rounded-[12px] bg-[#F8F8FA] pt-5 px-5">
+        <div className="md:max-w-[450px]">
+          <h6 className="text-[20px] text-center font-medium">
+            Get online right after landing. Start using your data plan as soon
+            as you arrive at your destination
+          </h6>
+          <p className="mt-2 text-center ">
+            Your phone will automatically connect to the internet network upon
+            arrival.
+          </p>
+          <div className="mt-5 flex items-center justify-center">
+            <button className="bg-[#48ec86] hover:bg-[#32A45E] hover:text-white font-medium py-2 px-[40px] rounded-[12px]">
+              View all destinations
+            </button>
+          </div>
         </div>
-        <div className="flex mt-10 items-center justify-end">
-        <DotLottieReact
-                  src="/travel.lottie"
-                  width={360}
-                  height={260}
-                  loop
-                  autoplay
-                />
+        <div className="flex mt-10 md:w-[350px] items-center justify-end">
+          <DotLottieReact
+            src="/travel.lottie"
+            width={360}
+            height={260}
+            loop
+            autoplay
+          />
         </div>
       </div>
       <div className="w-full hidden lg:block bg-[#F8F8FA]">
@@ -149,7 +148,7 @@ const HowWork = () => {
               </div>
             </div>
             <div>
-              <h6 className="text-[20px] font-semibold">
+              <h6 className="text-[20px] font-medium">
                 Get online right after landing. Start using your data plan as
                 soon as you arrive at your destination
               </h6>

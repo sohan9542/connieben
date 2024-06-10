@@ -1,12 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import { FaSquareFacebook, FaSquareInstagram } from "react-icons/fa6";
+import { FaSquareFacebook, FaInstagram  } from "react-icons/fa6";
 import { FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
+import { AiOutlineYoutube } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="bg-[#F8F8FB] px-5 lg:px-0 w-full pt-10">
+    <div className="bg-[#F8F8FB] px-5 lg:px-0 w-full">
       <div className="max-w-[1440px] border-b pb-10 mx-auto flex flex-col lg:flex-row items-center justify-between">
         <div className="">
           <a href="#" className="flex items-center justify-center lg:justify-start">
@@ -21,7 +23,7 @@ const Footer = () => {
           <div className="flex  mt-5 items-center pl-4 gap-4">
             <a
               href=""
-              className="flex items-center gap-2 border px-3 py-2 rounded-[8px] border-black"
+              className="flex items-center gap-2 border px-4 py-2 rounded-[8px] border-black"
             >
               <svg
                 class="group3"
@@ -84,7 +86,7 @@ const Footer = () => {
             </a>
             <a
               href=""
-              className="flex items-center gap-2 border px-3 py-2 rounded-[8px] border-black"
+              className="flex items-center gap-2 border px-4 py-2 rounded-[8px] border-black"
             >
               <svg
                 class="group-894"
@@ -134,31 +136,31 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-          <div className=" flex mt-8 pl-8 items-center gap-8">
+          <div className=" flex mt-8 pl-8 items-center gap-10">
             <a href="http://" target="_blank" rel="noopener noreferrer">
               <FaSquareFacebook className="w-5 h-5" />
             </a>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <FaSquareInstagram className="w-5 h-5" />
+              <FaInstagram  className="w-5 h-5" />
             </a>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <FaYoutube className="w-5 h-5" />
+              <AiOutlineYoutube className="w-5 h-5" />
             </a>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="w-5 h-5" />
+              <FaLinkedinIn className="w-5 h-5" />
             </a>
             <a href="http://" target="_blank" rel="noopener noreferrer">
               <FaTwitter className="w-5 h-5" />
             </a>
           </div>
         </div>
-        <div className=" flex items-start flex-col lg:flex-row mt-10 gap-10">
+        <div className=" flex items-start lg:mr-20 flex-col lg:flex-row mt-10 gap-16">
           <div>
-            <p className=" font-semibold mb-3">Partnerships</p>
+            <p className=" font-medium mb-5">Partnerships</p>
             <Link className="text-[14px]" href="/">Holafly for Business</Link>
           </div>
           <div>
-            <p className=" font-semibold mb-3">Top destinations</p>
+            <p className=" font-medium mb-5">Top destinations</p>
             <div className="flex flex-col gap-3">
               <Link className="text-[14px]" href="/">Europe</Link>
               <Link className="text-[14px]" href="/">USA</Link>
@@ -169,7 +171,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <p className=" font-semibold mb-3">Legal</p>
+            <p className=" font-medium mb-5">Legal</p>
             <div className="flex flex-col gap-3">
               <Link className="text-[14px]" href="/">Terms and Conditions</Link>
               <Link className="text-[14px]" href="/">Privacy Policy</Link>
@@ -180,7 +182,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <p className=" font-semibold mb-3">Interest</p>
+            <p className=" font-medium mb-5">Interest</p>
             <div className="flex flex-col gap-3">
               <Link className="text-[14px]" href="/">What is an eSIM</Link>
               <Link className="text-[14px]" href="/">eSIM compatible <br /> devices</Link>
@@ -192,8 +194,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="max-w-[1440px] py-[30px] mx-auto flex items-center justify-center text-center lg:text-left lg:justify-between">
-       <p>Made with  by people who love to travel.
+      <div className="max-w-[1440px] pt-[20px] text-[14px] pb-[10px] mx-auto flex items-center justify-center text-center lg:text-left lg:justify-between">
+       <p>Made with ❤️ by people who love to travel.
 <br  className=" lg:hidden"/>
 Holafly 2024 ®</p>
       </div>

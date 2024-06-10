@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 const Travel = () => {
   return (
-    <div className="w-full mt-[70px] lg:mt-0 mb-[70px]">
+    <div className="w-full  lg:mt-0 mb-[70px]">
       <div className="max-w-[1440px] mx-auto ">
         <div className="lg:w-[80%] px-4 lg:px-0 mx-auto">
-          <h1 className="font-semibold text-[26px] lg:text-[32px] leading-[32px] text-center">
+          <h1 className="font-medium mt-[70px] text-[26px] lg:text-[32px] leading-[32px] text-center">
             Where are you traveling next?
           </h1>
           <p className="text-center mt-4">
@@ -28,8 +28,8 @@ const Travel = () => {
                   />
                   <div>
                     <p>eSIM</p>
-                    <h2 className=" font-semibold text-[20px]">USA</h2>
-                    <h2 className=" font-semibold text-[20px]">
+                    <h2 className=" font-medium text-[20px]">USA</h2>
+                    <h2 className=" font-medium text-[20px]">
                       From $6.00 <span className="text-[12px]">USD</span>
                     </h2>
                   </div>
@@ -43,8 +43,10 @@ const Travel = () => {
               </div>
             ))}
           </div>
-          <div className="mt-10 flex items-center justify-center">
-<button className="bg-[#48ec86] hover:bg-[#32A45E] hover:text-white font-medium py-2 px-[100px] rounded-[12px]">View all destinations</button>
+          <div className="mt-10 flex w-full lg:w-auto items-center justify-center">
+            <button className="bg-[#48ec86] w-full lg:w-auto hover:bg-[#32A45E] hover:text-white font-medium py-2 px-[100px] rounded-[12px]">
+              View all destinations
+            </button>
           </div>
         </div>
       </div>

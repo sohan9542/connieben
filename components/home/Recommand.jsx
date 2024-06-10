@@ -20,7 +20,7 @@ const Recommand = () => {
     <div className=" w-full px-5 mb-[50px] lg:mb-0 lg:px-0">
       <div className="max-w-[1440px] mx-auto">
         <div className="lg:w-[80%] mx-auto">
-          <h1 className="text-center text-[26px]  lg:text-[32px] font-semibold">
+          <h1 className="text-center text-[26px]  lg:text-[32px] font-medium">
             Holafly is the most recommended <br className="hidden lg:block"/> International eSIM: check
             yourself.
           </h1>
@@ -49,7 +49,7 @@ const Recommand = () => {
                       company was going to charge me for service abroad.
                     </p>
                     <div className="flex items-center gap-3">
-                      <p className=" font-semibold text-[14px]">
+                      <p className=" font-medium text-[14px]">
                         Karen Christensen
                       </p>
                       <div className="flex items-center gap-2">
@@ -59,7 +59,7 @@ const Recommand = () => {
                           className="w-[14px]"
                           src="/verified.svg"
                         />
-                        <p className="text-[14px] font-semibold text-[#2065ce]">
+                        <p className="text-[14px] font-medium text-[#2065ce]">
                           Verified buyer
                         </p>
                       </div>
@@ -77,7 +77,7 @@ const Recommand = () => {
                       there.
                     </p>
                     <div className="flex items-center gap-3">
-                      <p className=" font-semibold text-[14px]">Paul Elwood</p>
+                      <p className=" font-medium text-[14px]">Paul Elwood</p>
                       <div className="flex items-center gap-2">
                         <Image
                           width={100}
@@ -85,7 +85,7 @@ const Recommand = () => {
                           className="w-[14px]"
                           src="/verified.svg"
                         />
-                        <p className="text-[14px] font-semibold text-[#2065ce]">
+                        <p className="text-[14px] font-medium text-[#2065ce]">
                           Verified buyer
                         </p>
                       </div>
@@ -107,7 +107,7 @@ const Recommand = () => {
                       company was going to charge me for service abroad.
                     </p>
                     <div className="flex items-center gap-3">
-                      <p className=" font-semibold text-[14px]">
+                      <p className=" font-medium text-[14px]">
                         Karen Christensen
                       </p>
                       <div className="flex items-center gap-2">
@@ -117,7 +117,7 @@ const Recommand = () => {
                           className="w-[14px]"
                           src="/verified.svg"
                         />
-                        <p className="text-[14px] font-semibold text-[#2065ce]">
+                        <p className="text-[14px] font-medium text-[#2065ce]">
                           Verified buyer
                         </p>
                       </div>
@@ -135,7 +135,7 @@ const Recommand = () => {
                       there.
                     </p>
                     <div className="flex items-center gap-3">
-                      <p className=" font-semibold text-[14px]">Paul Elwood</p>
+                      <p className=" font-medium text-[14px]">Paul Elwood</p>
                       <div className="flex items-center gap-2">
                         <Image
                           width={100}
@@ -143,7 +143,7 @@ const Recommand = () => {
                           className="w-[14px]"
                           src="/verified.svg"
                         />
-                        <p className="text-[14px] font-semibold text-[#2065ce]">
+                        <p className="text-[14px] font-medium text-[#2065ce]">
                           Verified buyer
                         </p>
                       </div>
@@ -180,7 +180,7 @@ const Recommand = () => {
             <div className=" lg:col-span-2">
               <div className="flex items-center flex-col lg:flex-row gap-5 lg:gap-10 ">
                 <div className="flex items-center gap-2">
-                  <h1 className=" font-semibold text-[30px]">
+                  <h1 className=" font-medium text-[30px]">
                     <span className="text-[50px]">4.6</span>/5
                   </h1>
                   <Image
@@ -194,7 +194,7 @@ const Recommand = () => {
                   <p>Based on 38000+ </p>
                   <p>
                     customer reviews on{" "}
-                    <a href="#" className=" font-semibold underline">
+                    <a href="#" className=" font-medium underline">
                       Trustpilot
                     </a>{" "}
                   </p>
@@ -202,7 +202,7 @@ const Recommand = () => {
               </div>
             </div>
             <div className="flex items-center flex-col lg:flex-row gap-5  ">
-                <h1 className="text-[50px] font-semibold">+1M</h1>
+                <h1 className="text-[50px] font-medium">+1M</h1>
                 <p>Travelers who <br /> trust us worldwide</p>
             </div>
           </div>

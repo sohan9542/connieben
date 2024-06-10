@@ -13,16 +13,16 @@ const ChangePlan = () => {
               width={500}
             />
             <div>
-              <h2 className="text-[20px] font-semibold">
+              <h2 className="text-[20px] md:text-center lg:text-left font-medium">
                 Change of plans? No problem at all!
               </h2>
-              <p className="mt-1 text-[14px] lg:text-[16px] mt-2">
+              <p className="text-[14px] md:text-center lg:text-left  lg:text-[16px] mt-2">
                 Purchase your Holafly eSIM with added peace of mind. You have up
                 to 6 <br /> months to request a refund.
               </p>
             </div>
           </div>
-          <button className="text-white w-full lg:mr-20 bg-black  lg:w-auto rounded-[12px] lg:px-[100px] py-2 hover:bg-[#56575A]">Learn More</button>
+          <button className="text-white w-full md:w-auto lg:mr-20 bg-black  rounded-[12px] md:px-[100px] py-2 hover:bg-[#56575A]">Learn More</button>
           <Image
               src={"/refund.png"}
               className="w-[253px]   lg:hidden "
