@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 const Travel = () => {
   return (
-    <div className="w-full mb-[70px]">
+    <div className="w-full mt-[70px] lg:mt-0 mb-[70px]">
       <div className="max-w-[1440px] mx-auto ">
-        <div className="w-[80%] mx-auto">
-          <h1 className="font-semibold text-[32px] text-center">
+        <div className="lg:w-[80%] px-4 lg:px-0 mx-auto">
+          <h1 className="font-semibold text-[26px] lg:text-[32px] leading-[32px] text-center">
             Where are you traveling next?
           </h1>
-          <p className="text-center">
+          <p className="text-center mt-4">
             Choose your destination first, then a data plan according to your
             needs.
           </p>

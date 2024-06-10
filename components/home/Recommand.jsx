@@ -17,15 +17,15 @@ const Recommand = () => {
     slidesToScroll: 1,
   };
   return (
-    <div className=" w-full">
-      <div className=" w-[1440px] mx-auto">
-        <div className="w-[80%] mx-auto">
-          <h1 className="text-center text-[32px] font-semibold">
-            Holafly is the most recommended <br /> International eSIM: check
+    <div className=" w-full px-5 mb-[50px] lg:mb-0 lg:px-0">
+      <div className="max-w-[1440px] mx-auto">
+        <div className="lg:w-[80%] mx-auto">
+          <h1 className="text-center text-[26px]  lg:text-[32px] font-semibold">
+            Holafly is the most recommended <br className="hidden lg:block"/> International eSIM: check
             yourself.
           </h1>
           <div className="grid my-10 grid-cols-1 gap-[100px] lg:grid-cols-3">
-            <div className=" lg:col-span-2">
+            <div className=" lg:col-span-2 border rounded-[12px] lg:border-transparent p-5 lg:p-0">
               <div className="slider-container">
                 <Slider
                   ref={(slider) => {
@@ -166,7 +166,7 @@ const Recommand = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className=" hidden lg:block">
               {" "}
               <Image
                 width={500}
@@ -176,9 +176,9 @@ const Recommand = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-[100px] lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 lg:gap-[100px] lg:grid-cols-3">
             <div className=" lg:col-span-2">
-              <div className="flex items-center gap-10 ">
+              <div className="flex items-center flex-col lg:flex-row gap-5 lg:gap-10 ">
                 <div className="flex items-center gap-2">
                   <h1 className=" font-semibold text-[30px]">
                     <span className="text-[50px]">4.6</span>/5
@@ -201,7 +201,7 @@ const Recommand = () => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center flex-col lg:flex-row gap-5  ">
                 <h1 className="text-[50px] font-semibold">+1M</h1>
                 <p>Travelers who <br /> trust us worldwide</p>
             </div>

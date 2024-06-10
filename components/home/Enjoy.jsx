@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 const Enjoy = () => {
   return (
-    <div className=" py-[100px]">
-      <h1 className="text-[32px] text-center font-semibold">
-        Enjoy reliable and affordable internet in <br /> your trips. We get you
+    <div className=" py-[100px] px-5 lg:px-0">
+      <h1 className="text-[26px] lg:text-[32px] text-center font-semibold">
+        Enjoy reliable and affordable internet in <br className="hidden lg:block"/> your trips. We get you
         covered.
       </h1>
       <div className="max-w-[1440px] mx-auto">
-        <div className=" w-full grid py-10 grid-cols-1 items-start lg:grid-cols-3 gap-10">
+        <div className=" w-full hidden lg:grid py-10 grid-cols-1 items-start lg:grid-cols-3 gap-10">
           <div className="flex items-center px-4 mt-3 flex-col ">
             <Image
               height={100}

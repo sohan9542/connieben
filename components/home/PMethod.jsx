@@ -2,7 +2,7 @@ import React from 'react'
 import Image from "next/image";
 const PMethod = () => {
   return (
-    <div className=' py-[40px] my-[60px] bg-[#F8F8FB] flex items-center justify-center gap-10'>
+    <div className=' py-[40px]  lg:px-0 my-[60px] bg-[#F8F8FB] flex flex-wrap items-center justify-center gap-10'>
          <Image
               className="h-[40px] w-auto"
               src={"/pay_safely.svg"}

@@ -16,7 +16,7 @@ import Download from '../components/home/Download'
 const Index = () => {
   return (
     <>
-      <Topbar/>
+      {/* <Topbar/> */}
       <Header/>
       <Hero/>
       <Travel/>
@@ -29,6 +29,8 @@ const Index = () => {
       <FAQ/>
       <Download/>
       <Footer/>
+      {/*
+       */}
     </>
   )
 }

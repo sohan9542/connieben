@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bg-[#F8F8FB] w-full pt-10">
-      <div className="w-[1440px] border-b pb-10 mx-auto flex items-center justify-between">
+    <div className="bg-[#F8F8FB] px-5 lg:px-0 w-full pt-10">
+      <div className="max-w-[1440px] border-b pb-10 mx-auto flex flex-col lg:flex-row items-center justify-between">
         <div className="">
-          <a href="#" className="-m-1.5 mr-4 p-1.5">
+          <a href="#" className="flex items-center justify-center lg:justify-start">
             <span className="sr-only">Your Company</span>
             <Image
               src={"/tlogo.png"}
@@ -18,7 +18,7 @@ const Footer = () => {
               className=" w-[150px]"
             />
           </a>
-          <div className="flex items-center pl-4 gap-4">
+          <div className="flex  mt-5 items-center pl-4 gap-4">
             <a
               href=""
               className="flex items-center gap-2 border px-3 py-2 rounded-[8px] border-black"
@@ -152,7 +152,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className=" flex items-start gap-10">
+        <div className=" flex items-start flex-col lg:flex-row mt-10 gap-10">
           <div>
             <p className=" font-semibold mb-3">Partnerships</p>
             <Link className="text-[14px]" href="/">Holafly for Business</Link>
@@ -192,9 +192,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="w-[1440px] py-[30px] mx-auto flex items-center justify-between">
+      <div className="max-w-[1440px] py-[30px] mx-auto flex items-center justify-center text-center lg:text-left lg:justify-between">
        <p>Made with  by people who love to travel.
-
+<br  className=" lg:hidden"/>
 Holafly 2024 ®</p>
       </div>
     </div>
