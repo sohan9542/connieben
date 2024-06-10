@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { FaSquareFacebook, FaInstagram  } from "react-icons/fa6";
+import { FaSquareFacebook, FaInstagram } from "react-icons/fa6";
 import { FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa6";
+import {
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowUp,
+} from "react-icons/md";
 
 const Footer = () => {
+  const [active, setActive] = useState(null);
   return (
-    <div className="bg-[#F8F8FB] px-5 lg:px-0 w-full">
+    <div className="bg-[#F8F8FB] px-5 pt-10 lg:pt-0 lg:px-0 w-full">
       <div className="max-w-[1440px] border-b pb-10 mx-auto flex flex-col lg:flex-row items-center justify-between">
         <div className="">
-          <a href="#" className="flex items-center justify-center lg:justify-start">
+          <a
+            href="#"
+            className="flex items-center justify-center lg:justify-start"
+          >
             <span className="sr-only">Your Company</span>
             <Image
               src={"/tlogo.png"}
@@ -141,7 +149,7 @@ const Footer = () => {
               <FaSquareFacebook className="w-5 h-5" />
             </a>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <FaInstagram  className="w-5 h-5" />
+              <FaInstagram className="w-5 h-5" />
             </a>
             <a href="http://" target="_blank" rel="noopener noreferrer">
               <AiOutlineYoutube className="w-5 h-5" />
@@ -154,50 +162,241 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className=" flex items-start lg:mr-20 flex-col lg:flex-row mt-10 gap-16">
+        <div className=" hidden lg:flex items-start lg:mr-20 flex-col lg:flex-row mt-10 gap-16">
           <div>
             <p className=" font-medium mb-5">Partnerships</p>
-            <Link className="text-[14px]" href="/">Holafly for Business</Link>
+            <Link className="text-[14px]" href="/">
+              Holafly for Business
+            </Link>
           </div>
           <div>
             <p className=" font-medium mb-5">Top destinations</p>
             <div className="flex flex-col gap-3">
-              <Link className="text-[14px]" href="/">Europe</Link>
-              <Link className="text-[14px]" href="/">USA</Link>
-              <Link className="text-[14px]" href="/">Japan</Link>
-              <Link className="text-[14px]" href="/">Turkey</Link>
-              <Link className="text-[14px]" href="/">Spain</Link>
-              <Link className="text-[14px]" href="/">France</Link>
+              <Link className="text-[14px]" href="/">
+                Europe
+              </Link>
+              <Link className="text-[14px]" href="/">
+                USA
+              </Link>
+              <Link className="text-[14px]" href="/">
+                Japan
+              </Link>
+              <Link className="text-[14px]" href="/">
+                Turkey
+              </Link>
+              <Link className="text-[14px]" href="/">
+                Spain
+              </Link>
+              <Link className="text-[14px]" href="/">
+                France
+              </Link>
             </div>
           </div>
           <div>
             <p className=" font-medium mb-5">Legal</p>
             <div className="flex flex-col gap-3">
-              <Link className="text-[14px]" href="/">Terms and Conditions</Link>
-              <Link className="text-[14px]" href="/">Privacy Policy</Link>
-              <Link className="text-[14px]" href="/">Cookies Policy</Link>
-              <Link className="text-[14px]" href="/">Refund Policy</Link>
-              <Link className="text-[14px]" href="/">Spain</Link>
-              <Link className="text-[14px]" href="/">Website Terms of Use</Link>
+              <Link className="text-[14px]" href="/">
+                Terms and Conditions
+              </Link>
+              <Link className="text-[14px]" href="/">
+                Privacy Policy
+              </Link>
+              <Link className="text-[14px]" href="/">
+                Cookies Policy
+              </Link>
+              <Link className="text-[14px]" href="/">
+                Refund Policy
+              </Link>
+              <Link className="text-[14px]" href="/">
+                Spain
+              </Link>
+              <Link className="text-[14px]" href="/">
+                Website Terms of Use
+              </Link>
             </div>
           </div>
           <div>
             <p className=" font-medium mb-5">Interest</p>
             <div className="flex flex-col gap-3">
-              <Link className="text-[14px]" href="/">What is an eSIM</Link>
-              <Link className="text-[14px]" href="/">eSIM compatible <br /> devices</Link>
-              <Link className="text-[14px]" href="/">how to install and <br /> activate your eSIM</Link>
-              <Link className="text-[14px]" href="/">FAQs</Link>
-              <Link className="text-[14px]" href="/">Blog</Link>
-            
+              <Link className="text-[14px]" href="/">
+                What is an eSIM
+              </Link>
+              <Link className="text-[14px]" href="/">
+                eSIM compatible <br /> devices
+              </Link>
+              <Link className="text-[14px]" href="/">
+                how to install and <br /> activate your eSIM
+              </Link>
+              <Link className="text-[14px]" href="/">
+                FAQs
+              </Link>
+              <Link className="text-[14px]" href="/">
+                Blog
+              </Link>
             </div>
           </div>
         </div>
+        <div className="   lg:hidden items-start w-full lg:mr-20 flex-col lg:flex-row mt-10 gap-16">
+          <div
+            onClick={() => {
+              if (active === 1) {
+                setActive(null);
+              } else {
+                setActive(1);
+              }
+            }}
+            className=" border-b  w-full lg:w-[49%]  rounded-[12px]  "
+          >
+            <div className="flex items-center cursor-pointer justify-between p-5">
+              <div></div>
+              <p>Partnerships</p>
+              {active === 1 ? (
+                <MdOutlineKeyboardArrowUp />
+              ) : (
+                <MdOutlineKeyboardArrowDown />
+              )}
+            </div>
+            {active === 1 && (
+            <div className="flex items-center pb-3 justify-center w-full">
+                <Link className="text-[14px] " href="/">
+                Holafly for Business
+              </Link>
+            </div>
+            )}
+          </div>
+          <div
+            onClick={() => {
+              if (active === 2) {
+                setActive(null);
+              } else {
+                setActive(2);
+              }
+            }}
+            className=" border-b  w-full lg:w-[49%]  rounded-[12px]  "
+          >
+            <div className="flex items-center cursor-pointer justify-between p-5">
+                <div></div>
+              <p>Top destinations</p>
+              {active === 2 ? (
+                <MdOutlineKeyboardArrowUp />
+              ) : (
+                <MdOutlineKeyboardArrowDown />
+              )}
+            </div>
+            {active === 2 && (
+              <div className="flex flex-col  pb-3 items-center px-5 gap-3">
+                <Link className="text-[14px]" href="/">
+                  Europe
+                </Link>
+                <Link className="text-[14px]" href="/">
+                  USA
+                </Link>
+                <Link className="text-[14px]" href="/">
+                  Japan
+                </Link>
+                <Link className="text-[14px]" href="/">
+                  Turkey
+                </Link>
+                <Link className="text-[14px]" href="/">
+                  Spain
+                </Link>
+                <Link className="text-[14px]" href="/">
+                  France
+                </Link>
+              </div>
+            )}
+          </div>
+          <div
+            onClick={() => {
+              if (active === 3) {
+                setActive(null);
+              } else {
+                setActive(3);
+              }
+            }}
+            className=" border-b  w-full lg:w-[49%]  rounded-[12px]  "
+          >
+            <div className="flex items-center cursor-pointer justify-between p-5">
+                <div></div>
+              <p>Legal</p>
+              {active === 3 ? (
+                <MdOutlineKeyboardArrowUp />
+              ) : (
+                <MdOutlineKeyboardArrowDown />
+              )}
+            </div>
+            {active === 3 && (
+              <div className="flex flex-col  pb-3 items-center gap-3">
+                <Link className="text-[14px]" href="/">
+                  Terms and Conditions
+                </Link>
+                <Link className="text-[14px]" href="/">
+                  Privacy Policy
+                </Link>
+                <Link className="text-[14px]" href="/">
+                  Cookies Policy
+                </Link>
+                <Link className="text-[14px]" href="/">
+                  Refund Policy
+                </Link>
+                <Link className="text-[14px]" href="/">
+                  Spain
+                </Link>
+                <Link className="text-[14px]" href="/">
+                  Website Terms of Use
+                </Link>
+              </div>
+            )}
+          </div>
+          <div
+            onClick={() => {
+              if (active === 4) {
+                setActive(null);
+              } else {
+                setActive(4);
+              }
+            }}
+            className=" border-b  w-full lg:w-[49%]  rounded-[12px]  "
+          >
+            <div className="flex items-center cursor-pointer justify-between p-5">
+                <div></div>
+              <p>Interest</p>
+              {active === 4 ? (
+                <MdOutlineKeyboardArrowUp />
+              ) : (
+                <MdOutlineKeyboardArrowDown />
+              )}
+            </div>
+            {active === 4 && (
+                 <div className="flex items-center  pb-3 flex-col gap-3">
+                 <Link className="text-[14px]" href="/">
+                   What is an eSIM
+                 </Link>
+                 <Link className="text-[14px]" href="/">
+                   eSIM compatible <br /> devices
+                 </Link>
+                 <Link className="text-[14px]" href="/">
+                   how to install and <br /> activate your eSIM
+                 </Link>
+                 <Link className="text-[14px]" href="/">
+                   FAQs
+                 </Link>
+                 <Link className="text-[14px]" href="/">
+                   Blog
+                 </Link>
+               </div>
+            )}
+          </div>
+
+         
+        </div>
       </div>
       <div className="max-w-[1440px] pt-[20px] text-[14px] pb-[10px] mx-auto flex items-center justify-center text-center lg:text-left lg:justify-between">
-       <p>Made with ❤️ by people who love to travel.
-<br  className=" lg:hidden"/>
-Holafly 2024 ®</p>
+        <p>
+          Made with ❤️ by people who love to travel.
+          <br className=" lg:hidden" />
+          Holafly 2024 ®
+        </p>
       </div>
     </div>
   );
