@@ -2,15 +2,15 @@ import React from "react";
 import Image from "next/image";
 const Download = () => {
   return (
-    <div className="bg-[#F4F4F4] w-full py-[50px] lg:pt-[100px]  lg:pb-[200px] mt-[100px]">
+    <div className="bg-[#F4F4F4] w-full py-[50px] lg:pt-[100px] px-5 lg:px-0  lg:pb-[200px] mt-[100px]">
       <div className=" max-w-[1400px] relative mx-auto">
         <Image
           height={2000}
-          className=" w-full h-[450px] lg:h-[340px] rounded-[20px] object-cover"
+          className=" w-full h-[450px] md:h-[340px] rounded-[20px] object-cover"
           width={2000}
           src={"/banner-app.svg"}
         />
-        <div className="flex items-center justify-between px-5 pt-5 flex-col lg:flex-row absolute top-0 left-0 w-full h-full z-40">
+        <div className="flex items-center justify-between px-5 pt-5 flex-col md:flex-row absolute top-0 left-0 w-full h-full z-40">
           <div className="lg:pl-[107px] lg:w-[505px]">
             {" "}
             <h1 className="text-[34px] font-medium leading-[40px]">
