@@ -48,3 +48,7 @@
 .font-medium{
   font-family: modern-era-med!important;
 }
+
+.shadow-shop{
+  box-shadow: 0 0 .5px rgba(66,71,76,.32),0 4px 8px rgba(66,71,76,.05),0 4px 40px #eee;
+}
