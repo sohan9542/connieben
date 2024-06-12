@@ -10,6 +10,7 @@ import Advantage from "../../components/destination/Advantage";
 import HowDoes from "../../components/destination/HowDoes";
 import What from "../../components/destination/What";
 import WeWill from "../../components/destination/WeWill";
+import BuyPopup from "../../components/destination/BuyPopup";
 const CountryName = () => {
   const router = useRouter();
   const { cname } = router.query;
@@ -36,7 +37,9 @@ const CountryName = () => {
        <div className=" w-full my-32">
        <FAQ title={`Frequently Asked Questions about the ${cname} eSIM`} subtitle={'We’ve put together this list to give you the answers you need.'}/>
        </div>
+
       </div>
+      <BuyPopup/>
       <Footer />
     </div>
   );
