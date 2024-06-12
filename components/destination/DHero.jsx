@@ -57,7 +57,7 @@ const DHero = ({ cname }) => {
   return (
     <div className=" w-full px-5 lg:px-0 my-[100px]">
       <div className=" max-w-[1440px] mx-auto">
-        <div className=" py-8 flex items-center gap-4">
+        <div className=" py-2 lg:py-8 flex items-center gap-4">
           <LuHome className="w-5 h-5" /> <MdKeyboardArrowRight />
           <Link className=" font-medium" href={"/shop"}>
             Destinations
@@ -267,7 +267,7 @@ const DHero = ({ cname }) => {
                   onClick={() => setActive(1)}
                   className={`${
                     active === 1 ? "border border-black bg-white" : ""
-                  } text-[14px] px-2 lg:px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
+                  } text-[14px] px-2 lg:px-5 py-2 font-semibold cursor-pointer rounded-[16px]`}
                 >
                   Features
                 </div>
@@ -275,7 +275,7 @@ const DHero = ({ cname }) => {
                   onClick={() => setActive(2)}
                   className={`${
                     active === 2 ? "border border-black bg-white" : ""
-                  } text-[14px] px-2 lg:px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
+                  } text-[14px] px-2 lg:px-5 py-2 font-semibold cursor-pointer rounded-[16px]`}
                 >
                   Description
                 </div>
@@ -283,7 +283,7 @@ const DHero = ({ cname }) => {
                   onClick={() => setActive(3)}
                   className={`${
                     active === 3 ? "border border-black bg-white" : ""
-                  } text-[14px] px-2 lg:px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
+                  } text-[14px] px-2 lg:px-5 py-2 font-semibold cursor-pointer rounded-[16px]`}
                 >
                   Technical Specs
                 </div>
