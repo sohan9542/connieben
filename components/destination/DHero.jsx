@@ -4,11 +4,58 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { LuHome } from "react-icons/lu";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import TrustBox from "./Copilot";
+import { IoIosInformationCircleOutline } from "react-icons/io";
+import { FiMinus, FiPlus } from "react-icons/fi";
 
 const DHero = ({ cname }) => {
   const [active, setActive] = useState(1);
-  const [pActive, setPActive] = useState(1);
+  const [pActive, setPActive] = useState(0);
+
+  const pricing = [
+    {
+      days: 7,
+      data: 1,
+      price: '25.00'
+    },
+    {
+      days: 15,
+      data: 2,
+      price: '35.00'
+    },
+    {
+      days: 30,
+      data: 3,
+      price: '55.00'
+    },
+    {
+      days: 30,
+      data: 5,
+      price: '95.00'
+    },
+    {
+      days: 30,
+      data: 10,
+      price: '145.00'
+    },
+    {
+      days: 30,
+      data: 20,
+      price: '200.00'
+    },
+  ]
+
+  const [travelars, setTravelars] = useState(1)
+  const makeChange = (method) => {
+    if (method === 'plus') {
+      setTravelars(travelars + 1)
+    }
+    else {
+      if (travelars > 1) {
+        setTravelars(travelars - 1)
+      }
+
+    }
+  }
   return (
     <div className=" w-full mt-[100px]">
       <div className=" max-w-[1440px] mx-auto">
@@ -19,8 +66,8 @@ const DHero = ({ cname }) => {
           </Link>
           <MdKeyboardArrowRight /> {cname}
         </div>
-        <div className=" grid grid-cols-2 lg:grid-cols-3 ">
-          <div className="flex flex-col">
+        <div className=" grid grid-cols-2 lg:grid-cols-12 ">
+          <div className="flex flex-col lg:col-span-4">
             <div className="relative">
               <Image
                 src={"/d/esim-albania.jpg"}
@@ -67,7 +114,7 @@ const DHero = ({ cname }) => {
               </div>
             </div>
           </div>
-          <div className=" lg:pl-10 lg:col-span-2">
+          <div className=" lg:pl-10 lg:col-span-8">
             <p className="text-sm text-[#56575a]">
               eSIM with Unlimited Data in
             </p>
@@ -79,7 +126,7 @@ const DHero = ({ cname }) => {
                 $27.00<span className="text-xs font-medium">USD</span>
               </h1>
             </div>
-            <div className=" mt-5 rounded-[16px] bg-white shadow-shop p-5">
+            <div className=" mt-5 rounded-[16px] bg-white shadow-shop p-8">
               <div className="flex items-center justify-between">
                 <h1 className="text-[22px] font-medium">
                   How many days are you traveling for?
@@ -91,50 +138,50 @@ const DHero = ({ cname }) => {
                   </select>
                 </div>
               </div>
-              <div className="grid mt-5 grid-cols-2 gap-3 lg:grid-cols-3">
-                <div
-                  onClick={() => setPActive(1)}
-                  className={`border ${
-                    pActive === 1 && "bg-[#F5FFF9] border-[#47EC86]"
-                  } cursor-pointer hover:border-black rounded-[8px] p-5`}
-                >
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h6 className="font-semibold">7 Days</h6>
-                      <h6 className="font-semibold text-gray-500">1 GB data</h6>
-                      <p className="mt-5">
-                        <strong>$27.00 </strong>
-                        <span className="text-xs">USD</span>
-                      </p>
+              <div className="grid my-5 grid-cols-2 gap-3 lg:grid-cols-3">
+                {pricing.map((item, ind) => (
+                  <div
+                    key={ind}
+                    onClick={() => setPActive(ind)}
+                    className={`border ${pActive === ind && "bg-[#F5FFF9] border-[#47EC86]"
+                      } cursor-pointer hover:border-black rounded-[8px] p-5`}
+                  >
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <h6 className="font-semibold">{item.days} Days</h6>
+                        <h6 className="font-semibold text-gray-500">{item.data} GB data</h6>
+                        <p className="mt-5">
+                          <strong>${item.price} </strong>
+                          <span className="text-xs">USD</span>
+                        </p>
+                      </div>
+                      {pActive === ind ? <div className="bg-[#47EC86] p-[6px] rounded-full flex items-center justify-center">
+                        <div className="w-[7px] h-[7px]  bg-white rounded-full"></div>
+                      </div> : <div className="bg-white p-[8px] border border-gray-400 rounded-full flex items-center justify-center">
+
+                      </div>}
                     </div>
-                 {pActive === 1 ?    <div className="bg-[#47EC86] p-[6px] rounded-full flex items-center justify-center">
-                      <div className="w-[7px] h-[7px]  bg-white rounded-full"></div>
-                    </div>:    <div className="bg-white p-[8px] border rounded-full flex items-center justify-center">
-                      
-                    </div>}
+                  </div>
+                ))}
+
+              </div>
+              <h1 className="text-[22px] flex items-center gap-1 font-medium">
+                <IoIosInformationCircleOutline />  How many travelers are you purchasing for?
+              </h1>
+              <div className="my-5 grid grid-cols-1 lg:grid-cols-3 gap-5">
+                <div className="flex px-5 items-center justify-between">
+                  <div onClick={() => makeChange('minus')} className="border cursor-pointer hover:bg-gray-50 px-3 py-3 rounded-[4px] flex items-center justify-center">
+                    <FiMinus />
+                  </div>
+                  {travelars}
+                  <div onClick={() => makeChange('plus')} className="border cursor-pointer hover:bg-gray-50 px-3 py-3 rounded-[4px] flex items-center justify-center">
+                    <FiPlus />
                   </div>
                 </div>
-                <div
-                  onClick={() => setPActive(2)}
-                  className={`border ${
-                    pActive === 2 && "bg-[#F5FFF9] border-[#47EC86]"
-                  } cursor-pointer hover:border-black rounded-[8px] p-5`}
-                >
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h6 className="font-semibold">15 Days</h6>
-                      <h6 className="font-semibold text-gray-500">2 GB data</h6>
-                      <p className="mt-5">
-                        <strong>$27.00 </strong>
-                        <span className="text-xs">USD</span>
-                      </p>
-                    </div>
-                    {pActive === 2 ?    <div className="bg-[#47EC86] p-[6px] rounded-full flex items-center justify-center">
-                      <div className="w-[7px] h-[7px]  bg-white rounded-full"></div>
-                    </div>:    <div className="bg-white p-[8px] border rounded-full flex items-center justify-center">
-                      
-                    </div>}
-                  </div>
+                <div className=" lg:col-span-2">
+                  <button className="w-full bg-[#48EC86] py-3 font-medium hover:text-white rounded-[6px] hover:bg-[#32A45E]">
+                    Get unlimited internet
+                  </button>
                 </div>
               </div>
             </div>
@@ -142,25 +189,22 @@ const DHero = ({ cname }) => {
               <div className="flex items-center gap-2 bg-[#f8f8fb] p-2 rounded-[16px]">
                 <div
                   onClick={() => setActive(1)}
-                  className={`${
-                    active === 1 ? "border border-black bg-white" : ""
-                  } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
+                  className={`${active === 1 ? "border border-black bg-white" : ""
+                    } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
                 >
                   Features
                 </div>
                 <div
                   onClick={() => setActive(2)}
-                  className={`${
-                    active === 2 ? "border border-black bg-white" : ""
-                  } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
+                  className={`${active === 2 ? "border border-black bg-white" : ""
+                    } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
                 >
                   Description
                 </div>
                 <div
                   onClick={() => setActive(3)}
-                  className={`${
-                    active === 3 ? "border border-black bg-white" : ""
-                  } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
+                  className={`${active === 3 ? "border border-black bg-white" : ""
+                    } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
                 >
                   Technical Specs
                 </div>
