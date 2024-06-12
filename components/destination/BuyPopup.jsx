@@ -23,7 +23,7 @@ const BuyPopup = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
-    <div className={`py-4 ${scrollY > 799 ? 'opacity-100 bottom-0': ' opacity-0 -bottom-[100px]'} bg-white transition-all duration-500 bgpop z-50 fixed bottom-0 left-0 w-full`}>
+    <div className={`py-4 ${scrollY > 799 ? 'opacity-100 bottom-0': ' opacity-0 -bottom-[100px]'} bg-white transition-all duration-500 bgpop z-50 fixed  left-0 w-full`}>
       <div className=" max-w-[1440px] mx-auto">
         <div className="w-full flex items-center justify-between">
           <div>
