@@ -19,14 +19,14 @@ const CountryName = () => {
       <Header />
       <div className=" min-h-screen w-full">
         <DHero cname={cname} />
-        <div className=" py-8 w-full bg-[#F8F8FB]">
+        <div className=" py-8  w-full lg:bg-[#F8F8FB]">
           <div className="max-w-[1440px] mx-auto">
             <h1 className="text-[34px] pl-3 pb-7">
               Advantages of using Holafly eSIM in Albania
             </h1>
           </div>
           <ChangePlan white={true} />
-          <div className="max-w-[1440px] mt-10 mx-auto">
+          <div className="max-w-[1440px] px-5 lg:px-0 mt-10 mx-auto">
            <Advantage/>
           </div>
         </div>
@@ -34,7 +34,7 @@ const CountryName = () => {
         <What/>
         <WeWill/>
         <Recommand/>
-       <div className=" w-full my-32">
+        <div className=" w-full my-32">
        <FAQ title={`Frequently Asked Questions about the ${cname} eSIM`} subtitle={'We’ve put together this list to give you the answers you need.'}/>
        </div>
 

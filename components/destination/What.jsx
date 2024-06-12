@@ -4,9 +4,9 @@ import { BsArrowRight } from "react-icons/bs";
 
 const What = () => {
   return (
-    <div className="bg-[#F8F8FB] w-full py-20">
+    <div className="bg-[#F8F8FB] px-5 lg:px-0 w-full py-20">
       <div className=" lg:max-w-[1440px] mx-auto">
-        <h1 className="text-[38px] pb-5">What you should know about eSIMs</h1>
+        <h1 className="text-[26px] font-semibold lg:text-[38px] pb-5">What you should know about eSIMs</h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           <div className=" bg-white rounded-[12px] border p-10">
             <Image

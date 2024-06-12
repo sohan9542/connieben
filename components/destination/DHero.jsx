@@ -55,7 +55,7 @@ const DHero = ({ cname }) => {
     }
   };
   return (
-    <div className=" w-full my-[100px]">
+    <div className=" w-full px-5 lg:px-0 my-[100px]">
       <div className=" max-w-[1440px] mx-auto">
         <div className=" py-8 flex items-center gap-4">
           <LuHome className="w-5 h-5" /> <MdKeyboardArrowRight />
@@ -64,8 +64,8 @@ const DHero = ({ cname }) => {
           </Link>
           <MdKeyboardArrowRight /> {cname}
         </div>
-        <div className=" grid grid-cols-2 lg:grid-cols-12 ">
-          <div className="flex flex-col lg:col-span-4">
+        <div className=" grid grid-cols-1 lg:grid-cols-12 ">
+          <div className=" hidden lg:flex flex-col lg:col-span-4">
             <div className="relative">
               <Image
                 src={"/d/esim-albania.jpg"}
@@ -113,10 +113,10 @@ const DHero = ({ cname }) => {
             </div>
           </div>
           <div className=" lg:pl-10 lg:col-span-8">
-            <p className="text-sm text-[#56575a]">
+            <p className="hidden lg:block text-sm text-[#56575a]">
               eSIM with Unlimited Data in
             </p>
-            <div className="flex items-center justify-between">
+            <div className="hidden lg:flex items-center justify-between">
               <h1 className=" capitalize text-[32px] lg:text-[40px] font-medium ">
                 {cname}
               </h1>
@@ -124,8 +124,9 @@ const DHero = ({ cname }) => {
                 $27.00<span className="text-xs font-medium">USD</span>
               </h1>
             </div>
-            <div className=" mt-5 rounded-[16px] bg-white shadow-shop p-8">
-              <div className="flex items-center justify-between">
+         
+            <div className=" lg:mt-5 rounded-[16px] bg-white shadow-shop p-8">
+              <div className="hidden lg:flex items-center justify-between">
                 <h1 className="text-[22px] font-medium">
                   How many days are you traveling for?
                 </h1>
@@ -136,6 +137,12 @@ const DHero = ({ cname }) => {
                   </select>
                 </div>
               </div>
+              <h1 className="text-[30px] lg:hidden font-semibold">
+                 Get a {cname} eSIM
+                </h1>
+            <p className=" lg:hidden font-semibold">
+                Downloadable {cname} SIM card with <br /> prepaid data
+                </p>
               <div className="grid my-5 grid-cols-2 gap-3 lg:grid-cols-3">
                 {pricing.map((item, ind) => (
                   <div
@@ -143,15 +150,15 @@ const DHero = ({ cname }) => {
                     onClick={() => setPActive(ind)}
                     className={`border ${
                       pActive === ind && "bg-[#F5FFF9] border-[#47EC86]"
-                    } cursor-pointer hover:border-black rounded-[8px] p-5`}
+                    } cursor-pointer hover:border-black rounded-[8px] p-3 lg:p-5`}
                   >
                     <div className="flex items-start justify-between">
                       <div>
                         <h6 className="font-semibold">{item.days} Days</h6>
-                        <h6 className="font-semibold text-gray-500">
+                        <h6 className="font-semibold text-nowrap text-gray-500">
                           {item.data} GB data
                         </h6>
-                        <p className="mt-5">
+                        <p className="mt-5 text-nowrap">
                           <strong>${item.price} </strong>
                           <span className="text-xs">USD</span>
                         </p>
@@ -167,12 +174,12 @@ const DHero = ({ cname }) => {
                   </div>
                 ))}
               </div>
-              <h1 className="text-[22px] flex items-center gap-1 font-medium">
+              <h1 className="text-[22px] hidden lg:flex items-center gap-1 font-medium">
                 <IoIosInformationCircleOutline /> How many travelers are you
                 purchasing for?
               </h1>
               <div className="my-5 grid grid-cols-1 lg:grid-cols-3 gap-5">
-                <div className="flex px-5 items-center justify-between">
+                <div className=" hidden lg:flex px-5 items-center justify-between">
                   <div
                     onClick={() => makeChange("minus")}
                     className="border cursor-pointer hover:bg-gray-50 px-3 py-3 rounded-[4px] flex items-center justify-center"
@@ -188,12 +195,15 @@ const DHero = ({ cname }) => {
                   </div>
                 </div>
                 <div className=" lg:col-span-2">
-                  <button className="w-full bg-[#48EC86] py-3 font-medium hover:text-white rounded-[6px] hover:bg-[#32A45E]">
+                  <button className="w-full hidden lg:block bg-[#48EC86] py-3 font-medium hover:text-white rounded-[6px] hover:bg-[#32A45E]">
                     Get unlimited internet
+                  </button>
+                  <button className="w-full block lg:hidden bg-[#48EC86] py-3 font-medium hover:text-white rounded-[6px] hover:bg-[#32A45E]">
+                   Buy Now
                   </button>
                 </div>
               </div>
-              <div className="flex mt-[30px] items-center justify-center gap-3  mb-5">
+              <div className="hidden lg:flex mt-[30px] flex-wrap items-center justify-center gap-3  mb-5">
                 <div className="flex items-center gap-2">
                   <Image
                     src={"/d/proteger.svg"}
@@ -244,7 +254,7 @@ const DHero = ({ cname }) => {
                   onClick={() => setActive(1)}
                   className={`${
                     active === 1 ? "border border-black bg-white" : ""
-                  } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
+                  } text-[14px] px-2 lg:px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
                 >
                   Features
                 </div>
@@ -252,7 +262,7 @@ const DHero = ({ cname }) => {
                   onClick={() => setActive(2)}
                   className={`${
                     active === 2 ? "border border-black bg-white" : ""
-                  } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
+                  } text-[14px] px-2 lg:px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
                 >
                   Description
                 </div>
@@ -260,7 +270,7 @@ const DHero = ({ cname }) => {
                   onClick={() => setActive(3)}
                   className={`${
                     active === 3 ? "border border-black bg-white" : ""
-                  } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
+                  } text-[14px] px-2 lg:px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
                 >
                   Technical Specs
                 </div>

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const HowDoes = () => {
   return (
-    <div className="my-[100px]">
+    <div className="my-[100px] px-5 lg:px-0">
       <h1 className="text-[34px] text-center">
         How does the Holafly eSIM for Albania work?
       </h1>
@@ -63,7 +63,7 @@ const HowDoes = () => {
             />
           </div>
         </div>
-        <div className=" mt-[60px] border rounded-[20px] p-10">
+        <div className=" mt-[60px] border rounded-[20px] p-5 lg:p-10">
           <h1 className=" font-medium text-[36px] text-center">
             Fast and reliable connection
           </h1>
