@@ -138,17 +138,17 @@ const DHero = ({ cname }) => {
                 </div>
               </div>
               <div className="flex lg:hidden items-center gap-2">
-              <h1 className="text-[30px] lg:hidden font-semibold">
-                Get a {cname} eSIM
-              </h1>
-              <Image
-                src={"/al.png"}
-                width={100}
-                height={100}
-                className="w-[30px] rounded-full h-[30px] object-cover"
-              />
+                <h1 className="text-[30px] lg:hidden font-medium">
+                  Get a {cname} eSIM
+                </h1>
+                <Image
+                  src={"/al.png"}
+                  width={100}
+                  height={100}
+                  className="w-[30px] rounded-full h-[30px] object-cover"
+                />
               </div>
-              <p className=" lg:hidden font-semibold">
+              <p className=" lg:hidden font-medium">
                 Downloadable {cname} SIM card with <br /> prepaid data
               </p>
               <div className="grid my-5 grid-cols-2 gap-3 lg:grid-cols-3">
@@ -161,9 +161,11 @@ const DHero = ({ cname }) => {
                     } cursor-pointer hover:border-black rounded-[8px] p-3 lg:p-5`}
                   >
                     <div className="flex relative items-start w-full justify-between">
-                      <div >
-                        <h6 className="font-semibold">{item.days} Days</h6>
-                        <h6 className="font-semibold  text-nowrap text-gray-500">
+                      <div>
+                        <h6 className="font-medium">
+                          <strong>{item.days} Days</strong>
+                        </h6>
+                        <h6 className="font-medium  text-nowrap text-gray-500">
                           {item.data} GB data
                         </h6>
                         <p className="mt-5 text-nowrap">
@@ -171,9 +173,7 @@ const DHero = ({ cname }) => {
                           <span className="text-xs">USD</span>
                         </p>
                       </div>
-                      <div className="w-full lg:hidden absolute top-[58%] left-0 h-[1px] bg-gray-200">
-
-                      </div>
+                      <div className="w-full lg:hidden absolute top-[58%] left-0 h-[1px] bg-gray-200"></div>
                       {pActive === ind ? (
                         <div className="bg-[#47EC86] p-[6px] rounded-full flex items-center justify-center">
                           <div className="w-[7px] h-[7px]  bg-white rounded-full"></div>
@@ -223,42 +223,43 @@ const DHero = ({ cname }) => {
                     height={600}
                   />
                   <p className=" font-medium text-gray-500 text-sm lg:text-xs">
-                    Secure <br className="hidden lg:block"/> payment <br className="hidden lg:block"/>
+                    Secure <br className="hidden lg:block" /> payment{" "}
+                    <br className="hidden lg:block" />
                     guaranteed
                   </p>
                 </div>
-              <div className="flex items-center gap-3">
-              <Image
-                  src={"/d/visa.svg"}
-                  className="w-[58px] "
-                  width={600}
-                  height={600}
-                />
-                <Image
-                  src={"/d/mastercard.svg"}
-                  className="w-[58px] "
-                  width={600}
-                  height={600}
-                />
-                <Image
-                  src={"/d/ApplePay.svg"}
-                  className="w-[38px] "
-                  width={600}
-                  height={600}
-                />
-                <Image
-                  src={"/d/GPay.svg"}
-                  className="w-[38px] "
-                  width={600}
-                  height={600}
-                />
-                <Image
-                  src={"/d/Paypal.svg"}
-                  className="w-[58px] "
-                  width={600}
-                  height={600}
-                />
-              </div>
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={"/d/visa.svg"}
+                    className="w-[58px] "
+                    width={600}
+                    height={600}
+                  />
+                  <Image
+                    src={"/d/mastercard.svg"}
+                    className="w-[58px] "
+                    width={600}
+                    height={600}
+                  />
+                  <Image
+                    src={"/d/ApplePay.svg"}
+                    className="w-[38px] "
+                    width={600}
+                    height={600}
+                  />
+                  <Image
+                    src={"/d/GPay.svg"}
+                    className="w-[38px] "
+                    width={600}
+                    height={600}
+                  />
+                  <Image
+                    src={"/d/Paypal.svg"}
+                    className="w-[58px] "
+                    width={600}
+                    height={600}
+                  />
+                </div>
               </div>
             </div>
             <div className="flex my-5 items-center justify-between">
@@ -267,25 +268,25 @@ const DHero = ({ cname }) => {
                   onClick={() => setActive(1)}
                   className={`${
                     active === 1 ? "border border-black bg-white" : ""
-                  } text-[14px] px-2 lg:px-5 py-2 font-semibold cursor-pointer rounded-[16px]`}
+                  } text-[14px] px-2 lg:px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
                 >
-                  Features
+                  <strong>Features</strong>
                 </div>
                 <div
                   onClick={() => setActive(2)}
                   className={`${
                     active === 2 ? "border border-black bg-white" : ""
-                  } text-[14px] px-2 lg:px-5 py-2 font-semibold cursor-pointer rounded-[16px]`}
+                  } text-[14px] px-2 lg:px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
                 >
-                  Description
+                  <strong>Description</strong>
                 </div>
                 <div
                   onClick={() => setActive(3)}
                   className={`${
                     active === 3 ? "border border-black bg-white" : ""
-                  } text-[14px] px-2 lg:px-5 py-2 font-semibold cursor-pointer rounded-[16px]`}
+                  } text-[14px] px-2 lg:px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
                 >
-                  Technical Specs
+                  <strong> Technical Specs </strong>
                 </div>
               </div>
               {/* <div className="border px-5 rounded-[8px] cursor-pointer hover:bg-gray-50 py-3 flex items-center gap-2">
