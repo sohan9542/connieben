@@ -124,8 +124,8 @@ const DHero = ({ cname }) => {
                 $27.00<span className="text-xs font-medium">USD</span>
               </h1>
             </div>
-         
-            <div className=" lg:mt-5 rounded-[16px] bg-white shadow-shop p-8">
+
+            <div className="  rounded-[16px]  shadow-shop  lg:p-8">
               <div className="hidden lg:flex items-center justify-between">
                 <h1 className="text-[22px] font-medium">
                   How many days are you traveling for?
@@ -137,12 +137,20 @@ const DHero = ({ cname }) => {
                   </select>
                 </div>
               </div>
+              <div className="flex lg:hidden items-center gap-2">
               <h1 className="text-[30px] lg:hidden font-semibold">
-                 Get a {cname} eSIM
-                </h1>
-            <p className=" lg:hidden font-semibold">
+                Get a {cname} eSIM
+              </h1>
+              <Image
+                src={"/al.png"}
+                width={100}
+                height={100}
+                className="w-[30px] rounded-full h-[30px] object-cover"
+              />
+              </div>
+              <p className=" lg:hidden font-semibold">
                 Downloadable {cname} SIM card with <br /> prepaid data
-                </p>
+              </p>
               <div className="grid my-5 grid-cols-2 gap-3 lg:grid-cols-3">
                 {pricing.map((item, ind) => (
                   <div
@@ -152,16 +160,19 @@ const DHero = ({ cname }) => {
                       pActive === ind && "bg-[#F5FFF9] border-[#47EC86]"
                     } cursor-pointer hover:border-black rounded-[8px] p-3 lg:p-5`}
                   >
-                    <div className="flex items-start justify-between">
-                      <div>
+                    <div className="flex relative items-start w-full justify-between">
+                      <div >
                         <h6 className="font-semibold">{item.days} Days</h6>
-                        <h6 className="font-semibold text-nowrap text-gray-500">
+                        <h6 className="font-semibold  text-nowrap text-gray-500">
                           {item.data} GB data
                         </h6>
                         <p className="mt-5 text-nowrap">
                           <strong>${item.price} </strong>
                           <span className="text-xs">USD</span>
                         </p>
+                      </div>
+                      <div className="w-full lg:hidden absolute top-[58%] left-0 h-[1px] bg-gray-200">
+
                       </div>
                       {pActive === ind ? (
                         <div className="bg-[#47EC86] p-[6px] rounded-full flex items-center justify-center">
@@ -199,11 +210,11 @@ const DHero = ({ cname }) => {
                     Get unlimited internet
                   </button>
                   <button className="w-full block lg:hidden bg-[#48EC86] py-3 font-medium hover:text-white rounded-[6px] hover:bg-[#32A45E]">
-                   Buy Now
+                    Buy Now
                   </button>
                 </div>
               </div>
-              <div className="hidden lg:flex mt-[30px] flex-wrap items-center justify-center gap-3  mb-5">
+              <div className="flex mt-[30px] flex-wrap items-center justify-center gap-3  mb-5">
                 <div className="flex items-center gap-2">
                   <Image
                     src={"/d/proteger.svg"}
@@ -211,45 +222,47 @@ const DHero = ({ cname }) => {
                     width={600}
                     height={600}
                   />
-                  <p className=" font-medium text-gray-500 text-xs">
-                    Secure <br /> payment <br />
+                  <p className=" font-medium text-gray-500 text-sm lg:text-xs">
+                    Secure <br className="hidden lg:block"/> payment <br className="hidden lg:block"/>
                     guaranteed
                   </p>
                 </div>
+              <div className="flex items-center gap-3">
+              <Image
+                  src={"/d/visa.svg"}
+                  className="w-[58px] "
+                  width={600}
+                  height={600}
+                />
                 <Image
-                    src={"/d/visa.svg"}
-                    className="w-[58px] "
-                    width={600}
-                    height={600}
-                  />
+                  src={"/d/mastercard.svg"}
+                  className="w-[58px] "
+                  width={600}
+                  height={600}
+                />
                 <Image
-                    src={"/d/mastercard.svg"}
-                    className="w-[58px] "
-                    width={600}
-                    height={600}
-                  />
+                  src={"/d/ApplePay.svg"}
+                  className="w-[38px] "
+                  width={600}
+                  height={600}
+                />
                 <Image
-                    src={"/d/ApplePay.svg"}
-                    className="w-[38px] "
-                    width={600}
-                    height={600}
-                  />
+                  src={"/d/GPay.svg"}
+                  className="w-[38px] "
+                  width={600}
+                  height={600}
+                />
                 <Image
-                    src={"/d/GPay.svg"}
-                    className="w-[38px] "
-                    width={600}
-                    height={600}
-                  />
-                <Image
-                    src={"/d/Paypal.svg"}
-                    className="w-[58px] "
-                    width={600}
-                    height={600}
-                  />
+                  src={"/d/Paypal.svg"}
+                  className="w-[58px] "
+                  width={600}
+                  height={600}
+                />
+              </div>
               </div>
             </div>
             <div className="flex my-5 items-center justify-between">
-              <div className="flex items-center gap-2 bg-[#f8f8fb] p-2 rounded-[16px]">
+              <div className="flex items-center gap-2 lg:bg-[#f8f8fb] p-2 rounded-[16px]">
                 <div
                   onClick={() => setActive(1)}
                   className={`${

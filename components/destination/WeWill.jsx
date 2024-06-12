@@ -14,7 +14,7 @@ const WeWill = () => {
             />
           </div>
           <div className=" lg:col-span-2 lg:pl-10">
-            <h1 className="text-[36px] font-semibold">
+            <h1 className="text-[26px] lg:text-[36px] font-semibold">
               We will send you the eSIM to your e-mail
             </h1>
             <p className=" mt-3 mb-10">As soon as you complete your purchase, you’ll receive the instructions to install and activate your international travel eSIM and get unlimited internet on your adventure!</p>

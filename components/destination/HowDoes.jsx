@@ -3,7 +3,7 @@ import Image from "next/image";
 const HowDoes = () => {
   return (
     <div className="my-[100px] px-5 lg:px-0">
-      <h1 className="text-[34px] text-center">
+      <h1 className="text-[26px]  font-semibold lg:text-[34px] text-center">
         How does the Holafly eSIM for Albania work?
       </h1>
       <div className="mt-16 max-w-[1440px] mx-auto">
@@ -64,7 +64,7 @@ const HowDoes = () => {
           </div>
         </div>
         <div className=" mt-[60px] border rounded-[20px] p-5 lg:p-10">
-          <h1 className=" font-medium text-[36px] text-center">
+          <h1 className="  text-[26px]  font-semibold lg:text-[34px] text-center">
             Fast and reliable connection
           </h1>
           <div className=" mt-10 grid grid-cols-1 lg:grid-cols-2  gap-5">

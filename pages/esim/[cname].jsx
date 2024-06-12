@@ -20,8 +20,8 @@ const CountryName = () => {
       <div className=" min-h-screen w-full">
         <DHero cname={cname} />
         <div className=" py-8  w-full lg:bg-[#F8F8FB]">
-          <div className="max-w-[1440px] mx-auto">
-            <h1 className="text-[34px] pl-3 pb-7">
+          <div className="max-w-[1440px] px-5 lg:px-0 mx-auto">
+            <h1 className="text-[26px]  font-semibold lg:text-[34px] pl-3 pb-7">
               Advantages of using Holafly eSIM in Albania
             </h1>
           </div>
