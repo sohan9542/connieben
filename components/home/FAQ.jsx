@@ -4,15 +4,17 @@ import {
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 
-const FAQ = () => {
+const FAQ = ({ title, subtitle }) => {
   const [active, setActive] = useState(null);
   return (
     <div className=" px-5 lg:px-0 my-[60px]">
       <h1 className=" text-[26px] lg:text-[32px] font-medium text-center ">
-        Frequently Asked Questions (FAQs)
+        {title ? title : " Frequently Asked Questions (FAQs)"}
       </h1>
       <p className=" mt-5 mb-10 text-center">
-        Find helpful information to answer your questions
+        {subtitle
+          ? subtitle
+          : " Find helpful information to answer your questions"}
       </p>
       <div className=" max-w-[1440px] mx-auto ">
         <div className=" lg:px-[44px] flex items-start flex-wrap gap-x-[2%] gap-y-4">

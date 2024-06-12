@@ -30,14 +30,14 @@ const Header = () => {
           {!searchOpen ? (
             <div className="w-full hidden lg:flex items-center justify-between">
               <div className="flex items-center gap-6">
-                <div className="w-[140px] cursor-pointer">
+                <Link href="/" className="w-[140px] cursor-pointer">
                   <Image
                     src={"/logo.png"}
                     width={300}
                     height={300}
                     className="w-full"
                   />
-                </div>
+                </Link>
 
                 <Popover className="relative">
                   <Popover.Button
@@ -258,14 +258,14 @@ hover:border-b-[2px] hover:border-[#E6485B] py-5 items-center gap-x-2 font-mediu
           ) : (
             <div className="w-full hidden lg:flex items-center justify-between">
               <div className="flex items-center w-full gap-3">
-              <div className="w-[161px] mt-[3px] cursor-pointer">
+              <Link href="/" className="w-[161px] mt-[3px] cursor-pointer">
                   <Image
                     src={"/logo.png"}
                     width={300}
                     height={300}
                     className="w-full"
                   />
-                </div>
+                </Link>
 
                 <div className="  flex items-center w-full  rounded-[12px] gap-2   p-2  ">
                   <div className="flex items-center w-full px-3 py-2 rounded-[8px]  bg-[#F8F8F8] gap-2">

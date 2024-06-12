@@ -15,49 +15,47 @@ const DHero = ({ cname }) => {
     {
       days: 7,
       data: 1,
-      price: '25.00'
+      price: "25.00",
     },
     {
       days: 15,
       data: 2,
-      price: '35.00'
+      price: "35.00",
     },
     {
       days: 30,
       data: 3,
-      price: '55.00'
+      price: "55.00",
     },
     {
       days: 30,
       data: 5,
-      price: '95.00'
+      price: "95.00",
     },
     {
       days: 30,
       data: 10,
-      price: '145.00'
+      price: "145.00",
     },
     {
       days: 30,
       data: 20,
-      price: '200.00'
+      price: "200.00",
     },
-  ]
+  ];
 
-  const [travelars, setTravelars] = useState(1)
+  const [travelars, setTravelars] = useState(1);
   const makeChange = (method) => {
-    if (method === 'plus') {
-      setTravelars(travelars + 1)
-    }
-    else {
+    if (method === "plus") {
+      setTravelars(travelars + 1);
+    } else {
       if (travelars > 1) {
-        setTravelars(travelars - 1)
+        setTravelars(travelars - 1);
       }
-
     }
-  }
+  };
   return (
-    <div className=" w-full mt-[100px]">
+    <div className=" w-full my-[100px]">
       <div className=" max-w-[1440px] mx-auto">
         <div className=" py-8 flex items-center gap-4">
           <LuHome className="w-5 h-5" /> <MdKeyboardArrowRight />
@@ -143,38 +141,49 @@ const DHero = ({ cname }) => {
                   <div
                     key={ind}
                     onClick={() => setPActive(ind)}
-                    className={`border ${pActive === ind && "bg-[#F5FFF9] border-[#47EC86]"
-                      } cursor-pointer hover:border-black rounded-[8px] p-5`}
+                    className={`border ${
+                      pActive === ind && "bg-[#F5FFF9] border-[#47EC86]"
+                    } cursor-pointer hover:border-black rounded-[8px] p-5`}
                   >
                     <div className="flex items-start justify-between">
                       <div>
                         <h6 className="font-semibold">{item.days} Days</h6>
-                        <h6 className="font-semibold text-gray-500">{item.data} GB data</h6>
+                        <h6 className="font-semibold text-gray-500">
+                          {item.data} GB data
+                        </h6>
                         <p className="mt-5">
                           <strong>${item.price} </strong>
                           <span className="text-xs">USD</span>
                         </p>
                       </div>
-                      {pActive === ind ? <div className="bg-[#47EC86] p-[6px] rounded-full flex items-center justify-center">
-                        <div className="w-[7px] h-[7px]  bg-white rounded-full"></div>
-                      </div> : <div className="bg-white p-[8px] border border-gray-400 rounded-full flex items-center justify-center">
-
-                      </div>}
+                      {pActive === ind ? (
+                        <div className="bg-[#47EC86] p-[6px] rounded-full flex items-center justify-center">
+                          <div className="w-[7px] h-[7px]  bg-white rounded-full"></div>
+                        </div>
+                      ) : (
+                        <div className="bg-white p-[8px] border border-gray-400 rounded-full flex items-center justify-center"></div>
+                      )}
                     </div>
                   </div>
                 ))}
-
               </div>
               <h1 className="text-[22px] flex items-center gap-1 font-medium">
-                <IoIosInformationCircleOutline />  How many travelers are you purchasing for?
+                <IoIosInformationCircleOutline /> How many travelers are you
+                purchasing for?
               </h1>
               <div className="my-5 grid grid-cols-1 lg:grid-cols-3 gap-5">
                 <div className="flex px-5 items-center justify-between">
-                  <div onClick={() => makeChange('minus')} className="border cursor-pointer hover:bg-gray-50 px-3 py-3 rounded-[4px] flex items-center justify-center">
+                  <div
+                    onClick={() => makeChange("minus")}
+                    className="border cursor-pointer hover:bg-gray-50 px-3 py-3 rounded-[4px] flex items-center justify-center"
+                  >
                     <FiMinus />
                   </div>
                   {travelars}
-                  <div onClick={() => makeChange('plus')} className="border cursor-pointer hover:bg-gray-50 px-3 py-3 rounded-[4px] flex items-center justify-center">
+                  <div
+                    onClick={() => makeChange("plus")}
+                    className="border cursor-pointer hover:bg-gray-50 px-3 py-3 rounded-[4px] flex items-center justify-center"
+                  >
                     <FiPlus />
                   </div>
                 </div>
@@ -184,27 +193,74 @@ const DHero = ({ cname }) => {
                   </button>
                 </div>
               </div>
+              <div className="flex mt-[30px] items-center justify-center gap-3  mb-5">
+                <div className="flex items-center gap-2">
+                  <Image
+                    src={"/d/proteger.svg"}
+                    className="w-[24px] "
+                    width={600}
+                    height={600}
+                  />
+                  <p className=" font-medium text-gray-500 text-xs">
+                    Secure <br /> payment <br />
+                    guaranteed
+                  </p>
+                </div>
+                <Image
+                    src={"/d/visa.svg"}
+                    className="w-[58px] "
+                    width={600}
+                    height={600}
+                  />
+                <Image
+                    src={"/d/mastercard.svg"}
+                    className="w-[58px] "
+                    width={600}
+                    height={600}
+                  />
+                <Image
+                    src={"/d/ApplePay.svg"}
+                    className="w-[38px] "
+                    width={600}
+                    height={600}
+                  />
+                <Image
+                    src={"/d/GPay.svg"}
+                    className="w-[38px] "
+                    width={600}
+                    height={600}
+                  />
+                <Image
+                    src={"/d/Paypal.svg"}
+                    className="w-[58px] "
+                    width={600}
+                    height={600}
+                  />
+              </div>
             </div>
             <div className="flex my-5 items-center justify-between">
               <div className="flex items-center gap-2 bg-[#f8f8fb] p-2 rounded-[16px]">
                 <div
                   onClick={() => setActive(1)}
-                  className={`${active === 1 ? "border border-black bg-white" : ""
-                    } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
+                  className={`${
+                    active === 1 ? "border border-black bg-white" : ""
+                  } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
                 >
                   Features
                 </div>
                 <div
                   onClick={() => setActive(2)}
-                  className={`${active === 2 ? "border border-black bg-white" : ""
-                    } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
+                  className={`${
+                    active === 2 ? "border border-black bg-white" : ""
+                  } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
                 >
                   Description
                 </div>
                 <div
                   onClick={() => setActive(3)}
-                  className={`${active === 3 ? "border border-black bg-white" : ""
-                    } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
+                  className={`${
+                    active === 3 ? "border border-black bg-white" : ""
+                  } px-5 py-2 font-medium cursor-pointer rounded-[16px]`}
                 >
                   Technical Specs
                 </div>

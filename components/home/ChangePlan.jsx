@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-const ChangePlan = () => {
+const ChangePlan = ({white}) => {
   return (
     <div className="w-full px-5 lg:px-0 mb-[70px]">
-      <div className="max-w-[1360px] mx-auto ">
-        <div className="gb flex items-center w-full flex-col px-5 pt-5 lg:p-0 lg:flex-row gap-5 lg:gap-0 justify-between">
+      <div className="max-w-[1430px] mx-auto ">
+        <div className={` ${white ? 'bg-white border rounded-[12px]': 'gb'} flex items-center w-full flex-col px-5 pt-5 lg:p-0 lg:flex-row gap-5 lg:gap-0 justify-between`}>
           <div className="flex items-center  gap-10">
             <Image
               src={"/refund.png"}
