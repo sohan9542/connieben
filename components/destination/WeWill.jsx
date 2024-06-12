@@ -14,7 +14,7 @@ const WeWill = () => {
             />
           </div>
           <div className=" lg:col-span-2 lg:pl-10">
-            <h1 className="text-[26px] lg:text-[36px] font-semibold">
+            <h1 className="text-[26px] lg:text-[36px] font-medium">
               We will send you the eSIM to your e-mail
             </h1>
             <p className=" mt-3 mb-10">As soon as you complete your purchase, you’ll receive the instructions to install and activate your international travel eSIM and get unlimited internet on your adventure!</p>
@@ -25,7 +25,7 @@ const WeWill = () => {
               height={500}
               className="w-[24px] "
             /> 
-            <p className=" font-semibold">Installation instructions with QR code</p>
+            <p className=" font-medium">Installation instructions with QR code</p>
             </div>
             <div className="flex items-center mt-2 gap-2">
             <Image
@@ -34,7 +34,7 @@ const WeWill = () => {
               height={500}
               className="w-[24px] "
             /> 
-            <p className=" font-semibold">Manual installation instructions</p>
+            <p className=" font-medium">Manual installation instructions</p>
             </div>
           </div>
           <div className=" flex lg:hidden items-center px-10 justify-center">

@@ -27,12 +27,12 @@ const BuyPopup = () => {
       <div className=" max-w-[1440px] mx-auto">
         <div className="w-full flex items-center  justify-between">
           <div className="w-full lg:w-auto">
-            <h1 className=" font-semibold hidden lg:block">Albania </h1>
-            <h1 className=" font-semibold text-[20px] block lg:hidden">$27.00 <span className="text-[11px]">USD</span> </h1>
-            <h1 className=" font-semibold ">7 Days 1 GB data</h1>
+            <h1 className=" font-medium hidden lg:block">Albania </h1>
+            <h1 className=" font-medium text-[20px] block lg:hidden">$27.00 <span className="text-[11px]">USD</span> </h1>
+            <h1 className=" font-medium ">7 Days 1 GB data</h1>
           </div>
           <div className="flex items-center  gap-5">
-            <h1 className=" hidden font-semibold lg:flex items-center gap-1">
+            <h1 className=" hidden font-medium lg:flex items-center gap-1">
               $27.00 <span className="text-[11px]">USD</span>{" "}
             </h1>
             <div className="flex items-center gap-5">

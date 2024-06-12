@@ -38,8 +38,8 @@ const Advantage = () => {
       {data.map((item, ind) => (
         <div key={ind} className=" p-8 rounded-[12px] border">
           <Image src={item.img} width={200} height={200} className="w-[50px] h-[54px]" />
-          <h1 className="py-5 text-[24px] font-semibold">{item.title}</h1>
-          <p className=" font-semibold">{item.desc}</p>
+          <h1 className="py-5 text-[24px] font-medium">{item.title}</h1>
+          <p className=" font-medium">{item.desc}</p>
         </div>
       ))}
     </div>

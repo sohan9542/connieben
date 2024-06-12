@@ -3,7 +3,7 @@ import Image from "next/image";
 const HowDoes = () => {
   return (
     <div className="my-[100px] px-5 lg:px-0">
-      <h1 className="text-[26px]  font-semibold lg:text-[34px] text-center">
+      <h1 className="text-[26px]  font-medium lg:text-[34px] text-center">
         How does the Holafly eSIM for Albania work?
       </h1>
       <div className="mt-16 max-w-[1440px] mx-auto">
@@ -12,10 +12,10 @@ const HowDoes = () => {
             <div className="bg-[#DCF4FF] rounded-[12px] font-medium px-3 py-2">
               01.
             </div>
-            <h1 className="  text-center font-semibold leading-[24px]  text-[20px]">
+            <h1 className="  text-center font-medium leading-[24px]  text-[20px]">
               Check your phone is compatible <br /> with eSIM
             </h1>
-            <p className=" font-semibold text-center">
+            <p className=" font-medium text-center">
               Check if your smartphone is compatible <br /> now
             </p>
             <Image
@@ -29,10 +29,10 @@ const HowDoes = () => {
             <div className="bg-[#DCF4FF] rounded-[12px] font-medium px-3 py-2">
               02.
             </div>
-            <h1 className="  text-center font-semibold leading-[24px]  text-[20px]">
+            <h1 className="  text-center font-medium leading-[24px]  text-[20px]">
               Buy your prepaid eSIM
             </h1>
-            <p className=" font-semibold text-center">
+            <p className=" font-medium text-center">
               Chose the plan that suits you best and buy your <br /> eSIM card
               from our online store.
             </p>
@@ -47,10 +47,10 @@ const HowDoes = () => {
             <div className="bg-[#DCF4FF] rounded-[12px] font-medium px-3 py-2">
               03.
             </div>
-            <h1 className="  text-center font-semibold leading-[24px]  text-[20px]">
+            <h1 className="  text-center font-medium leading-[24px]  text-[20px]">
               Scan the QR code
             </h1>
-            <p className=" font-semibold text-center">
+            <p className=" font-medium text-center">
               It’s easy. Just scan the QR code we send you and <br /> turn on
               data roaming from your settings. Now you <br /> can enjoy browsing
               the web.
@@ -64,7 +64,7 @@ const HowDoes = () => {
           </div>
         </div>
         <div className=" mt-[60px] border rounded-[20px] p-5 lg:p-10">
-          <h1 className="  text-[26px]  font-semibold lg:text-[34px] text-center">
+          <h1 className="  text-[26px]  font-medium lg:text-[34px] text-center">
             Fast and reliable connection
           </h1>
           <div className=" mt-10 grid grid-cols-1 lg:grid-cols-2  gap-5">
@@ -76,7 +76,7 @@ const HowDoes = () => {
                   height={200}
                   className="w-[30px] rounded-full "
                 />
-                <p className=" font-semibold">
+                <p className=" font-medium">
                   Clear video calls with no delays
                 </p>
               </div>
@@ -87,7 +87,7 @@ const HowDoes = () => {
                   height={200}
                   className="w-[36px] -ml-[2px] rounded-full "
                 />
-                <p className=" font-semibold">
+                <p className=" font-medium">
                   Share stories in just a few seconds
                 </p>
               </div>
@@ -98,7 +98,7 @@ const HowDoes = () => {
                   height={200}
                   className="w-[36px] -ml-[2px] rounded-full "
                 />
-                <p className=" font-semibold">
+                <p className=" font-medium">
                   Enjoy creating video content and super fast uploading
                 </p>
               </div>
@@ -109,11 +109,11 @@ const HowDoes = () => {
                   height={200}
                   className="w-[27px] ml-1 "
                 />
-                <p className=" font-semibold">Find your way wherever you go!</p>
+                <p className=" font-medium">Find your way wherever you go!</p>
               </div>
             </div>
             <div className="bg-[#F8F8FB] p-8 rounded-[12px]">
-              <h6 className="text-[20px] font-semibold">
+              <h6 className="text-[20px] font-medium">
                 The best performace in all your apps
               </h6>
               <p className=" py-5">

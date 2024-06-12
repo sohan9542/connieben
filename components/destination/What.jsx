@@ -6,7 +6,7 @@ const What = () => {
   return (
     <div className="bg-[#F8F8FB] px-5 lg:px-0 w-full py-20">
       <div className=" lg:max-w-[1440px] mx-auto">
-        <h1 className="text-[26px] font-semibold lg:text-[38px] pb-5">What you should know about eSIMs</h1>
+        <h1 className="text-[26px] font-medium lg:text-[38px] pb-5">What you should know about eSIMs</h1>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
           <div className=" bg-white rounded-[12px] border p-10">
             <Image
@@ -15,10 +15,10 @@ const What = () => {
               height={200}
               className="w-[48px] "
             />
-            <h5 className="text-[24px] pt-5  pb-3 font-semibold">
+            <h5 className="text-[24px] pt-5  pb-3 font-medium">
               No local phone number
             </h5>
-            <p className=" font-semibold">
+            <p className=" font-medium">
               This eSIM only includes data. It does not allow you to make cell
               phone calls or send SMS messages. You can still use WhatsApp or
               Skype to call your contacts.
@@ -31,10 +31,10 @@ const What = () => {
               height={200}
               className="w-[48px] "
             />
-            <h5 className="text-[24px] pt-5  pb-3 font-semibold">
+            <h5 className="text-[24px] pt-5  pb-3 font-medium">
               Your phone must support eSIM
             </h5>
-            <p className=" font-semibold">
+            <p className=" font-medium">
               Make sure your phone is both unlocked and compatible with eSIM
               technology.
             </p>
@@ -49,10 +49,10 @@ const What = () => {
               height={200}
               className="w-[48px] "
             />
-            <h5 className="text-[24px] pt-5  pb-3 font-semibold">
+            <h5 className="text-[24px] pt-5  pb-3 font-medium">
             Install before you travel and take off
             </h5>
-            <p className=" font-semibold">
+            <p className=" font-medium">
             Scan the QR code from your smartphone settings and add the data plan. But don’t activate it until you land at your destination. Take the printed QR code on your travels just in case.
             </p>
          
