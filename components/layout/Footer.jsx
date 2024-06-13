@@ -13,7 +13,7 @@ import {
 const Footer = ({pbTrue}) => {
   const [active, setActive] = useState(null);
   return (
-    <div className={`bg-[#F8F8FB] ${pbTrue && ' pb-[200px]'}  px-5 pt-10 lg:pt-0 lg:px-0 w-full`}>
+    <div className={`bg-[#F8F8FB] ${pbTrue && ' pb-[200px] lg:pb-[100px]'}  px-5 pt-10 lg:pt-0 lg:px-0 w-full`}>
       <div className="max-w-[1440px] border-b lg:pb-10 mx-auto flex flex-col lg:flex-row items-center justify-between">
         <div className="">
           <a
