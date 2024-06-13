@@ -1,8 +1,8 @@
-import React,{useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
-const BuyPopup = () => {
-  const [travelars, setTravelars] = useState(1);
+const BuyPopup = ({ travelars, setTravelars, price,
+  setPrice }) => {
   const makeChange = (method) => {
     if (method === "plus") {
       setTravelars(travelars + 1);
@@ -17,23 +17,29 @@ const BuyPopup = () => {
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Cleanup function to remove the event listener on unmount
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className={`py-4 px-5 lg:px-0 ${scrollY > 799 ? 'opacity-100 bottom-0': ' opacity-0 -bottom-[100px]'} bg-white transition-all duration-500 bgpop z-50 fixed  left-0 w-full`}>
+    <div
+      className={`py-4 px-5 lg:px-0 ${
+        scrollY > 799 ? "opacity-100 bottom-0" : " opacity-0 -bottom-[100px]"
+      } bg-white transition-all duration-500 bgpop z-50 fixed  left-0 w-full`}
+    >
       <div className=" max-w-[1440px] mx-auto">
         <div className="w-full flex items-center  justify-between">
           <div className="w-full lg:w-auto">
             <h1 className=" font-medium hidden lg:block">Albania </h1>
-            <h1 className=" font-medium text-[20px] block lg:hidden">$27.00 <span className="text-[11px]">USD</span> </h1>
-            <h1 className=" font-medium ">7 Days 1 GB data</h1>
+            <h1 className=" font-medium text-[20px] block lg:hidden">
+            {parseFloat(parseFloat(price?.price) * travelars).toFixed(2)} <span className="text-[11px]">USD</span>{" "}
+            </h1>
+            <h1 className=" font-medium ">{price?.days} Days {price?.data} GB data</h1>
           </div>
           <div className="flex items-center  gap-5">
             <h1 className=" hidden font-medium lg:flex items-center gap-1">
-              $27.00 <span className="text-[11px]">USD</span>{" "}
+            {parseFloat(parseFloat(price?.price) * travelars).toFixed(2)} <span className="text-[11px]">USD</span>{" "}
             </h1>
             <div className="flex items-center gap-5">
               <div
@@ -51,14 +57,13 @@ const BuyPopup = () => {
               </div>
             </div>
             <button className="w-full hidden lg:block bg-[#48EC86] py-2 px-[40px] font-medium hover:text-white rounded-[6px] hover:bg-[#32A45E]">
-                    Get unlimited internet
-                  </button>
+             Buy Now
+            </button>
           </div>
-         
         </div>
         <button className="w-full my-4  block lg:hidden  bg-[#48EC86] py-2 px-[40px] font-medium hover:text-white rounded-[6px] hover:bg-[#32A45E]">
-                    Get unlimited internet
-                  </button>
+          Buy Now
+        </button>
       </div>
     </div>
   );

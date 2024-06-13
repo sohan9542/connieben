@@ -127,8 +127,8 @@ const Hero = () => {
                   />
                 </div>
                 <div>
-                  <p>Based on 38000+ </p>
-                  <p>
+                  <p className="text-center lg:text-left">Based on 38000+ </p>
+                  <p className="text-center lg:text-left">
                     customer reviews on{" "}
                     <a href="#" className=" font-medium underline">
                       Trustpilot

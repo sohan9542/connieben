@@ -7,10 +7,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
-const DHero = ({ cname }) => {
-  const [active, setActive] = useState(1);
-  const [pActive, setPActive] = useState(0);
-
+const DHero = ({ cname, price, setPrice, travelars, setTravelars }) => {
   const pricing = [
     {
       days: 7,
@@ -43,8 +40,9 @@ const DHero = ({ cname }) => {
       price: "200.00",
     },
   ];
+  const [active, setActive] = useState(1);
+  const [pActive, setPActive] = useState(0);
 
-  const [travelars, setTravelars] = useState(1);
   const makeChange = (method) => {
     if (method === "plus") {
       setTravelars(travelars + 1);
@@ -121,7 +119,8 @@ const DHero = ({ cname }) => {
                 {cname}
               </h1>
               <h1 className=" capitalize text-[32px] lg:text-[40px] font-medium ">
-                $27.00<span className="text-xs font-medium">USD</span>
+                {parseFloat(parseFloat(price?.price) * travelars).toFixed(2)}
+                <span className="text-xs font-medium">USD</span>
               </h1>
             </div>
 
@@ -155,7 +154,10 @@ const DHero = ({ cname }) => {
                 {pricing.map((item, ind) => (
                   <div
                     key={ind}
-                    onClick={() => setPActive(ind)}
+                    onClick={() => {
+                      setPActive(ind);
+                      setPrice(item);
+                    }}
                     className={`border ${
                       pActive === ind && "bg-[#F5FFF9] border-[#47EC86]"
                     } cursor-pointer hover:border-black rounded-[8px] p-3 lg:p-5`}
@@ -163,17 +165,17 @@ const DHero = ({ cname }) => {
                     <div className="flex relative items-start w-full justify-between">
                       <div>
                         <h6 className="font-medium">
-                          <strong>{item.days} Days</strong>
+                          <strong> {item.data} GB data</strong>
                         </h6>
                         <h6 className="font-medium  text-nowrap text-gray-500">
-                          {item.data} GB data
+                          {item.days} Days
                         </h6>
                         <p className="mt-5 text-nowrap">
                           <strong>${item.price} </strong>
                           <span className="text-xs">USD</span>
                         </p>
                       </div>
-                      <div className="w-full lg:hidden absolute top-[58%] left-0 h-[1px] bg-gray-200"></div>
+                      <div className="w-full  absolute top-[59%] left-0 h-[1px] bg-gray-200"></div>
                       {pActive === ind ? (
                         <div className="bg-[#47EC86] p-[6px] rounded-full flex items-center justify-center">
                           <div className="w-[7px] h-[7px]  bg-white rounded-full"></div>
@@ -207,7 +209,7 @@ const DHero = ({ cname }) => {
                 </div>
                 <div className=" lg:col-span-2">
                   <button className="w-full hidden lg:block bg-[#48EC86] py-3 font-medium hover:text-white rounded-[6px] hover:bg-[#32A45E]">
-                    Get unlimited internet
+                    Buy Now
                   </button>
                   <button className="w-full block lg:hidden bg-[#48EC86] py-3 font-medium hover:text-white rounded-[6px] hover:bg-[#32A45E]">
                     Buy Now

@@ -10,11 +10,11 @@ import {
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 
-const Footer = () => {
+const Footer = ({pbTrue}) => {
   const [active, setActive] = useState(null);
   return (
-    <div className="bg-[#F8F8FB] px-5 pt-10 lg:pt-0 lg:px-0 w-full">
-      <div className="max-w-[1440px] border-b pb-10 mx-auto flex flex-col lg:flex-row items-center justify-between">
+    <div className={`bg-[#F8F8FB] ${pbTrue && ' pb-[200px]'} lg:pb-0 px-5 pt-10 lg:pt-0 lg:px-0 w-full`}>
+      <div className="max-w-[1440px] border-b lg:pb-10 mx-auto flex flex-col lg:flex-row items-center justify-between">
         <div className="">
           <a
             href="#"
@@ -356,7 +356,7 @@ const Footer = () => {
                 setActive(4);
               }
             }}
-            className=" border-b  w-full lg:w-[49%]  rounded-[12px]  "
+            className="   w-full lg:w-[49%]  rounded-[12px]  "
           >
             <div className="flex items-center cursor-pointer justify-between p-5">
                 <div></div>
@@ -373,10 +373,10 @@ const Footer = () => {
                    What is an eSIM
                  </Link>
                  <Link className="text-[14px]" href="/">
-                   eSIM compatible <br /> devices
+                   eSIM compatible  devices
                  </Link>
                  <Link className="text-[14px]" href="/">
-                   how to install and <br /> activate your eSIM
+                   how to install and activate your eSIM
                  </Link>
                  <Link className="text-[14px]" href="/">
                    FAQs

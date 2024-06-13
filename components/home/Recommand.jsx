@@ -191,8 +191,8 @@ const Recommand = () => {
                   />
                 </div>
                 <div>
-                  <p>Based on 38000+ </p>
-                  <p>
+                  <p className="text-center lg:text-left">Based on 38000+ </p>
+                  <p className="text-center lg:text-left">
                     customer reviews on{" "}
                     <a href="#" className=" font-medium underline">
                       Trustpilot
@@ -201,9 +201,9 @@ const Recommand = () => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center flex-col lg:flex-row gap-5  ">
-                <h1 className="text-[50px] font-medium">+1M</h1>
-                <p>Travelers who <br /> trust us worldwide</p>
+            <div className="flex items-center flex-col lg:flex-row lg:gap-5  ">
+                <h1 className="text-[50px]  font-medium">+1M</h1>
+                <p>Travelers who <br className="hidden lg:block"/> trust us worldwide</p>
             </div>
           </div>
         </div>

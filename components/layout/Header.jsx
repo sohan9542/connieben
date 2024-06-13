@@ -19,6 +19,172 @@ const Header = () => {
   const [searchVal, setsearchVal] = useState("");
   const [destination, setDestination] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const countries = [
+    {
+      id: 1,
+      countries: [
+        "Afghanistan",
+        "Albania",
+        "Algeria",
+        "Andorra",
+        "Angola",
+        "Anguilla",
+        "Antigua & Barbuda",
+        "Argentina",
+        "Armenia",
+        "Aruba",
+        "Australia",
+        "Austria",
+        "Azerbaijan",
+        "Bahamas",
+        "Bahrain",
+        "Bangladesh",
+        "Barbados",
+        "Belarus",
+        "Belgium",
+        "Belize",
+        "Benin",
+        "Bermuda",
+        "Bhutan",
+        "Bolivia",
+        "Bosnia & Herzegovina",
+        "Botswana",
+        "Brazil",
+        "British Virgin Islands",
+        "Brunei",
+        "Bulgaria",
+        "Burkina Faso",
+        "Burundi",
+      ],
+    },
+    {
+      id: 2,
+      countries: [
+        "Cambodia",
+        "Cameroon",
+        "Canada",
+        "Cape Verde",
+        "Cayman Islands",
+        "Central African Republic",
+        "Chad",
+        "Chile",
+        "China",
+        "Colombia",
+        "Comoros",
+        "Congo",
+        "Cook Islands",
+        "Costa Rica",
+        "Cote d'Ivoire",
+        "Croatia",
+        "Cuba",
+        "Cyprus",
+        "Czech Republic",
+        "Democratic Republic of the Congo",
+        "Denmark",
+        "Djibouti",
+        "Dominica",
+        "Dominican Republic",
+        "Ecuador",
+        "Egypt",
+        "El Salvador",
+        "Equatorial Guinea",
+        "Eritrea",
+        "Estonia",
+        "Ethiopia",
+        "Falkland Islands",
+        "Faroe Islands",
+        "Fiji",
+        "Finland",
+        "France",
+        "French Guiana",
+        "French Polynesia",
+        "Gabon",
+      ],
+    },
+    {
+      id: 3,
+      countries: [
+        "Gambia",
+        "Georgia",
+        "Germany",
+        "Ghana",
+        "Gibraltar",
+        "Greece",
+        "Greenland",
+        "Grenada",
+        "Guadeloupe",
+        "Guam",
+        "Guatemala",
+        "Guinea",
+        "Guinea-Bissau",
+        "Guyana",
+        "Haiti",
+        "Honduras",
+        "Hong Kong",
+        "Hungary",
+        "Iceland",
+      ],
+    },
+    {
+      id: 4,
+      countries: [
+        "India",
+        "Indonesia",
+        "Iran",
+        "Iraq",
+        "Ireland",
+        "Isle of Man",
+        "Israel",
+        "Italy",
+        "Jamaica",
+        "Japan",
+        "Jersey",
+        "Jordan",
+        "Kazakhstan",
+        "Kenya",
+        "Kiribati",
+        "Kosovo",
+        "Kuwait",
+        "Kyrgyzstan",
+      ],
+    },
+    {
+      id: 5,
+      countries: [
+        "Laos",
+        "Latvia",
+        "Lebanon",
+        "Lesotho",
+        "Liberia",
+        "Libya",
+        "Liechtenstein",
+        "Lithuania",
+        "Luxembourg",
+        "Macau",
+        "Madagascar",
+        "Malawi",
+        "Malaysia",
+        "Maldives",
+        "Mali",
+        "Malta",
+        "Marshall Islands",
+        "Martinique",
+        "Mauritania",
+        "Mauritius",
+        "Mayotte",
+        "Mexico",
+        "Micronesia",
+        "Moldova",
+        "Monaco",
+        "Mongolia",
+        "Montenegro",
+        "Montserrat",
+        "Morocco",
+        "Mozambique",
+        "Myanmar",
+      ],
+    },
+  ];
   return (
     <div className=" relative w-full">
       <div className="w-full fixed top-0 left-0  z-50 bg-white  border-b">
@@ -133,42 +299,15 @@ hover:border-b-[2px] hover:border-[#E6485B] py-5 items-center gap-x-1 font-mediu
                               </div>
                             </div>
                             <div className="grid grid-cols-1 lg:grid-cols-3">
-                              <div className="pl-4">
-                                <div className="flex flex-col gap-5  py-5">
-                                  <Link href={"/usa"}>Albania</Link>
-                                  <Link href={"/Canada"}>Algeria</Link>
-                                  <Link href={"/Turkey"}>Andorra</Link>
-                                  <Link href={"/Spain"}>Argentina</Link>
-                                  <Link href={"/France"}>Armenia</Link>
-                                  <Link href={"/Mexico"}>Aruba</Link>
-                                  <Link href={"/Mexico"}>Asia</Link>
-                                  <Link href={"/Mexico"}>Australia</Link>
-                                </div>
-                              </div>
-                              <div>
-                                <div className="flex flex-col gap-5  py-5">
-                                  <Link href={"/usa"}>Austria</Link>
-                                  <Link href={"/Canada"}>Azerbaijan</Link>
-                                  <Link href={"/Turkey"}>Bahamas</Link>
-                                  <Link href={"/Spain"}>Bahrain</Link>
-                                  <Link href={"/France"}>Bangladesh</Link>
-                                  <Link href={"/Mexico"}>Barbados</Link>
-                                  <Link href={"/Mexico"}>Belarus</Link>
-                                  <Link href={"/Mexico"}>Belgium</Link>
-                                </div>
-                              </div>
-                              <div>
-                                <div className="flex flex-col gap-5  py-5">
-                                  <Link href={"/usa"}>
-                                    Bosnia and Herzegovina
+                              {countries
+                                .filter((item) => item.id === active)?.[0]
+                                ?.countries?.map((c, inx) => (
+                                  <di className="py-[6px]">
+                                    <Link key={inx} href={`/esim/${c}`}>
+                                    {c}
                                   </Link>
-                                  <Link href={"/Canada"}>Botswana</Link>
-                                  <Link href={"/Turkey"}>Brazil</Link>
-                                  <Link href={"/Spain"}>Brunei</Link>
-                                  <Link href={"/France"}>Bangladesh</Link>
-                                  <Link href={"/Mexico"}>Bulgaria</Link>
-                                </div>
-                              </div>
+                                  </di>
+                                ))}
                             </div>
                             <div className="mt-4 px-8 w-full">
                               <div className="border flex items-center py-2 justify-center">
@@ -258,7 +397,7 @@ hover:border-b-[2px] hover:border-[#E6485B] py-5 items-center gap-x-2 font-mediu
           ) : (
             <div className="w-full hidden lg:flex items-center justify-between">
               <div className="flex items-center w-full gap-3">
-              <Link href="/" className="w-[161px] mt-[3px] cursor-pointer">
+                <Link href="/" className="w-[161px] mt-[3px] cursor-pointer">
                   <Image
                     src={"/logo.png"}
                     width={300}
